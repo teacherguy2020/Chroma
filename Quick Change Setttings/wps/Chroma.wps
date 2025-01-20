@@ -1,0 +1,323 @@
+##Chroma, a color-agnostic theme
+##by RetiredTeacherGuy, 2025
+
+### 
+%wd
+%Fl(3,72-albumcorners.fnt)
+%Fl(6,12-Roboto-Regular.fnt)
+%Fl(7,24-Roboto-Bold.fnt)
+%Fl(8,64-RobotoCondensed-Light.fnt)
+%Fl(9,16-Roboto-Bold.fnt)
+%Fl(10,18-0newiconfont.fnt)
+##
+#
+###
+#
+#------------ Background Layer ------------#
+#This blots out the status bar
+%V(0,0,-,-,-)%VB
+%Cl(75,6,170,170)%VB
+
+#
+#
+#------------ Foreground Layer ------------#
+%V(0,0,-,-,-)
+%V(0,0,-,-,-)%VB
+%x(f,frame.bmp,0,0)%VB
+#
+#
+#current master
+%?mh<%?if(%St(battery display),=,graphic)<%Vd(LockscreenClock)%x(y,Wallpaper.bmp,0,0)|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%?if(%St(volume display),=,graphic)<%x(n,gradient.bmp,0,0)%Vd(Slider)>%?if(%St(statusbar), =,top)<%Vd(count)>>|%?if(%St(volume display),!=,graphic)<%x(q,frame.bmp,0,0)%Vd(Slider)>%?mp<|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%Vd(Repeat)%?if(%St(volume display),=,graphic)<%x(m,gradient.bmp,0,0)>%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(a)%Cd%Vd(f)%Vd(g)%Vd(Player)%Vd(CornersSmall)%Vd(clock)%?if(%St(statusbar), =,bottom)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)>>
+
+
+# %?rr<|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|>
+#%?mh<|%?if(%rr,!=,10)<%Vd(Star)%Vd(Rating)|%Vd(Star)>>
+
+#
+#
+# Define viewports
+%Vl(a,90,20,140,140,-)
+%Vl(b,75,4,170,170,-)
+%Vl(c,0,0,-,-,-)
+%Vl(d,0,0,-,-,-)
+%Vl(e,260,187,30,17,10)
+
+#goofy workaround for getting viewport a to work and also rounded corners of frame.bmp in pause.
+%Vl(f,0,0,20,20,-)%x(e,frame.bmp,0,0)
+%Vl(g,300,0,20,20,-)%x(g,frame.bmp,-300,0)
+%Vl(h,0,0,-,-,-)%x(h,frame.bmp,0,0)
+#
+#
+#
+#
+#################################################
+#
+# %?if(%St(battery display), =, graphic)<%?if(%St(backlight on button hold), !=, off)<%?mh<%Vd(LockscreenFlush)%Vd(Lockscreen)%Vd(LockscreenClock)>>>
+#
+# %?if(%St(battery display), =, graphic)<%?if(%St(backlight on button hold), !=, off)<%?mh<%Vd(LockscreenFlush)%Vd(LockscreenClock)>>>
+# %?if(%St(battery display), =, graphic)<%?if(%St(backlight on button hold), =, off)<%?mh<%Vd(AlwaysOnDisplay)>>>
+#-- Refresh Song info after volume pop-up --#
+# %?if(%St(battery display), =, graphic)<%?mh<|%Vd(Player)%?mv(1.5)<%Vd(info)|%Vd(info)>>|%Vd(Player)%?mv(1.5)<%Vd(info)|%Vd(info)>>
+
+
+
+#######################################################################
+#
+#
+# Background art rounded color matching
+#Top Left Large
+%Vl(CornersLarge,74,5,172,172,3)
+# %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)>>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)|*>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+#%?if(%St(car adapter mode),=,on)<%?C<A|>>
+%?C<A|>
+#
+#
+#Top left small
+# %Vl(CornersSmall,89,19,15,15,2)
+# %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)>>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+#s
+#
+#
+#
+#
+#
+#
+#Bottom left small
+# %Vl(CornersSmall,89,146,15,15,2)
+# %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)>>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+#r
+#
+#
+#
+#
+#
+#
+# Top right small
+# %Vl(CornersSmall,215,20,15,15,2)
+# %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)>>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+#u
+#
+#
+#
+#
+#
+#Bottom right small
+# %Vl(CornersSmall,215,145,15,15,2)
+# %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840000)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730000)|%Vf(630000)>>>|%Vf(735963)>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,18)<%Vf(000031)|%Vf(636100)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(404040)|%Vf(303030)>>|%Vf(428294)>>>>>>
+#t
+#
+#
+#
+#
+#
+#
+#-- Icon Stuff --#
+# --- Combined Play Mode and Status Icons Row ---
+# Playback and hold status
+%Vl(Player,6,6,64,15,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
+#
+#battery icons
+%Vl(Player,294,4,21,14,10)%Fl(2,18-0newiconfont.fnt)
+%?bp<%Vf(00ff00)１|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
+%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
+
+# %Vl(Player,294,4,21,14,10)%Fl(10,18-newiconfont.fnt)
+#%?bc<１|>
+
+#
+#draw a 1 pixel bar why does font slot 1 make it work?
+%Vl(Player,0,182,320,-,1)
+%dr(0,0,-,1,c6c5c5)
+#
+#
+#
+#Track Count
+%Vl(count,8,222,65,15,10)
+# %al%pp%?if(%pp,<,10)<１１１|%?if(%pp,<,100)<１１|%?if(%pp,<,1000)<１|>>>
+%al%pp%?if(%pp,<,10)<|%?if(%pp,<,100)<|%?if(%pp,<,1000)<|>>>
+
+#
+%Vl(count,212,222,100,15,10)
+%ar%?if(%pe,<,10)<%pe|%?if(%pe,<,100)<%pe|%?if(%pe,<,1000)<%pe|%pe>>>
+#
+# new disk activity ##
+%Vl(Player,278,2,13,18,10)
+%ac%?lh<%t(0.3)q;%t(0.3)p;%t(0.3)o;%t(0.3)p|>
+#
+#
+# track times and slider #
+%Vl(Slider,60,227,34,10,6)
+%ar%pc
+# SLIDER and color logic#
+%Vl(Slider,100,230,120,8,-)
+%pb(0,0,120,8,-,slider,-)
+#color logic for nice variety
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+#total song time
+%Vl(Slider,224,227,34,10,6)
+%al%pt
+#
+#
+#-- Track Title on its own line--#
+%Vl(Player,30,183,260,36,7)%s%ac%it
+#color logic for nice variety
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+#turn off accent color if user doesn't want it
+%?if(%St(scrollbar),!=,right)<%Vf(-)>
+#
+# Rotating info album/artist/file format
+%Vl(Player,4,206,311,17,9)
+%s%ac%t(4)%s%ia;%ac%t(6)%id • %iy;%ac%t(4)%fk kHz %fc @ %fb kbps;%ac%t(4)%?It<Next: %It>
+#
+#
+#
+#clock for pause mode
+%Vl(clock,80,224,-80,15,9)%ac%?cf<%cH:%cM|%cl:%cM %cP> • %?cu<Mon|Tue|Wed|Thu|Fri|Sat|Sun>. %cb %cd
+#
+#
+# %Vl(info,65,136,16,16,-)
+#
+#
+#
+#
+#
+#repeat logic #
+
+%Vl(Slider,300,187,17,30,10)
+%?mm<%Vf(-)|
+%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(D3B7FF)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
+%?mm<E|{|`|E|E>
+
+##
+
+# three dots
+%Vl(Slider,7,159,25,15,3)%Vf(-)
+C
+
+
+# star and heart
+%Vl(Slider,292,150,23,25,3)
+# (%rr,!=,10)<%acE|%acD>
+%?rr<%acD|%acD|%acD|%acD|%acD|%acD|%acD|%acD|%acD|%acD|%acE>
+
+#song rating, font over a font (star/rating) so invert color
+#viewport, Vb,Vf, and invert must be on same line, letters next line
+#remember to include %ac for the number
+%Vl(Slider,300,159,8,9,10)%Vb(-)%Vf(-)(%Vs(invert)
+# %?if(%rr,<,10)<%ac%?rr<Ð|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|>|>
+%ac%?rr<q|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|q>
+
+|%Vd(Slider)>
+# zero character is Ð
+#%Vl(BlueStar,294,151,22,24,3)%Vf(4491E9)
+#%V(294,151,22,24,3)%Vf(4491E9)
+#D
+# color the star blue for 10/10
+# %?if(%rr,>=,9)<%Vf(4491E9)|%Vf(-)>
+
+# Color changing shuffle icon
+%Vl(Slider,9,188,17,15,10)
+#there is still a carriage return error in here, but you don't see it because of the viewport height and extra G
+%?ps<%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(D3B7FF)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>|%Vf(-)G>
+G
+
+# %?if(%ps,!=,s)<O>
+#%?ps<|%Vf(-)>
+#
+#
+# --- Volume Slider ---#
+%?mv(5)<%Vd(volume)|>
+%Vl(volume,4,40,6,100,-)
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+%pv(0,0,6,100)
+#
+#
+#------------ Lockscreen Layer ------------#
+%Vl(WallpaperClear,0,0,-,-,-)
+%Vl(LockFlush,0,0,-,-,-)
+%Vl(LockFlush,4,30,175,207,-)
+%Vl(LockscreenClock,0,0,-,-,-)
+%Vl(LockscreenClock,4,30,175,207,-)
+#sleep timer and moon icon
+Vl(LockscreenClock,50,4,30,30,10)
+?bs<f|>
+# Playback and hold status PROBLEM HERE THIS SHOWS WHEN NOT ON LOCKSCREEN
+# %Vl(LockscreenClock,4,4,60,30,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)F|%if(%mp, =, 1)9|%if(%mp, =, 2)6|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<4|>%?mh<n|>
+%Vl(LockscreenClock,6,6,64,15,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
+#
+#battery
+#battery icons
+%Vl(LockscreenClock,294,4,21,14,10)
+%?bp<|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
+%?bp<%Vf(00ff00)１|%Vf(-)%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
+
+#
+##
+%Vl(LockscreenClock,0,32,-,75,8)%ac%?cf<%cH:%cM|%cl:%cM %cP>
+%Vl(LockscreenClock,0,101,-,20,7)%ac%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca> %?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cb %cd|%?if(%St(lang), =, english-us)<%cb %cd|%cd %cb>>
+#
+#---Notification---#
+# %Vl(LockscreenClock,16,150,288,75,-)
+# %Vl(LockscreenClock,261,186,30,14,10)
+# %?mp<%if(%mp, =, 0)F|%if(%mp, =, 1)9|%if(%mp, =, 2)6|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<4|>
+#show track title and artist on lockscreen
+#
+%Vl(LockscreenClock,20,183,280,26,7)
+%?mp<|%ac%ia: %s%it|||>
+# %s%ac%?it<%?if(%St(statusbar), =,off)<%t(6)%ia;%t(6)%id;%t(0)>%?if(%St(statusbar), =,top)<%id>%?if(%St(statusbar), =,bottom)<%ia>|%d(1)>
+# new disk activity #
+%Vl(LockscreenClock,278,2,13,18,10)
+%ac%?lh<%t(0.3)q;%t(0.3)p;%t(0.3)o;%t(0.3)p|>
+%?lh<%t(0.1)p;%t(0.1)p;%t(0.1)o;%t(0.1)p|>
+#
+#
+#------------ Always on Display ------------#
+%Vl(AlwaysOnDisplay,0,0,-,-,-)
+#sleep timer and moon icon
+%Vl(AlwaysOnDisplay,50,4,30,30,10)
+%?bs<f|>
+#battery icons
+# %Vl(AlwaysOnDisplay,294,4,21,14,2)
+# %?bp<j|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
+# %?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
+# %Vl(AlwaysOnDisplay,280,3,36,17,7)
+# %?or(%if(%bl, <, 22),%if(%bl, =, 31),%if(%bl, =, 41),%if(%bl, =, 51),%if(%bl, =, 61),%if(%bl, =, 71),%if(%bl, =, 81),%if(%bl, =, 91))<%ac|%al>%?if(%bl, =, 100)<CGD|%bl%%>
+#
+# new disk activity #
+%Vl(AlwaysOnDisplay,278,2,13,18,10)
+%ac%?lh<%t(0.3)q;%t(0.3)p;%t(0.3)o;%t(0.3)p|>
+#
+# %Vl(AlwaysOnDisplay,0,32,-,55,8)%Vf(000000)%ac%?cf<%cH:%cM|%cl:%cM %cP>
+%Vl(AlwaysOnDisplay,0,101,-,20,7)%Vf(000000)%ac%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca> %?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cb %cd|%?if(%St(lang), =, english-us)<%cb %cd|%cd %cb>>
+#
+%Vl(AlwaysOnDisplay,10,163,-10,20,7)%Vf(000000)%s%ac%?it<%it|%fn>
+%Vl(AlwaysOnDisplay,10,183,-10,22,7)%Vf(000000)
+# %s%ac%?it<%?if(%St(statusbar), =,off)<%t(6)%ia;%t(6)%id>%?if(%St(statusbar), =,top)<%id>%?if(%St(statusbar), =,bottom)<%ia>|%d(1)>
