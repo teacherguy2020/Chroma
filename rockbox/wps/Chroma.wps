@@ -237,7 +237,17 @@ C
 # Color changing shuffle icon
 %Vl(Slider,9,188,17,15,10)
 #there is still a carriage return error in here, but you don't see it because of the viewport height and extra G
-%?ps<%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(D3B7FF)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>|%Vf(-)G>
+# %?ps<%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(D3B7FF)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>|%Vf(-)G>
+%?ps<%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>|G>
 G
 
 # %?if(%ps,!=,s)<O>
