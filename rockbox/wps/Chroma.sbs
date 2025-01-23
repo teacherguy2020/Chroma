@@ -101,7 +101,7 @@
 
 
 #Battery, Upper Right
-%Vl(DateTime,294,5,21,14,11)
+%Vl(littleclock,294,5,21,14,11)
 %?bp<%Vf(00ff00)１|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
 %?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
 
