@@ -56,6 +56,20 @@ talkclip:
 
 [shortcut]
 type: file
+data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsON.cfg
+name: Debug on, Date off
+icon: 20
+talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsOFF.cfg
+name: Date on, Debug off
+icon: 20
+talkclip: 
+
+[shortcut]
+type: file
 data: /<HDD0>/Chroma Stuff/Settings/scrollbarwidth7.cfg
 name: ..miniDock On
 icon: 20
@@ -148,14 +162,14 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/BatteryGraphic.cfg
-name: ••Show Wallpaper on Lockscreen
+name: Show Wallpaper on Lockscreen
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/BatteryNumeric.cfg
-name: ••No Wallpaper on Lockscreen
+name: No Wallpaper on Lockscreen
 icon: 20
 talkclip: 
 
@@ -184,6 +198,13 @@ talkclip:
 type: file
 data: /<HDD0>/Chroma Stuff/Chroma Skins/ac.Steel.White.Sky.cfg
 name: Steel
+icon: 4
+talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Chroma Skins/Blue.cfg
+name: Blue
 icon: 4
 talkclip: 
 
