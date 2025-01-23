@@ -1,6 +1,8 @@
 
 
-<img src="Chromapic.jpg" alt="Chroma" width="500">
+<img src="Chromapic.jpg" alt="Chroma" align="left" width="500">
+
+This is some text that will wrap around the image. You can add as much text as you want, and it will flow nicely around the image because the `align="left"` attribute pushes the image to the left of the text. Make sure to leave a blank line between the image tag and the paragraph for proper rendering.
 
 
 Welcome to Chroma BETA (expect issues)
@@ -11,7 +13,7 @@ In addition to color variety, Chroma makes extensive use of Shortcuts to give yo
 
 The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and NeoBeat. Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in laggyness while scrolling the tiles. For a much faster experience I have included two 8-tile desktop presets which will hopefully meet the needs of most users. And as a nod to Apple, I have included a Mac OS miniDock which you can turn on or off. The sbs also includes a nice "Now Playing" tile.
 
-<img src="Desktop.JPG" alt="Desktop" width="300">
+<img src="Desktop.JPG" alt="Desktop" align="right" width="300">
 
 There is a custom Quickscreen (like you see in d00k's and Dreaml1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (Chroma.cfg, for example) and uncomment or add: 
 
@@ -20,7 +22,7 @@ qs bottom: brightness
 qs left: shuffle
 qs right: repeat
 
-<img src="QS.jpg" alt="quickscreen" width="300">
+<img src="QS.jpg" alt="quickscreen" align="left" width="300">
 
 This will give you a more pleasant looking Quickscreen. You can experiment with using your own quickscreen settings instead, but you'll need to edit Chroma.sbs.
 
@@ -74,7 +76,7 @@ IF your expected number of menu items show and all tile icons match, great! You 
                                          
 Oh, by the way... if you wish to use ratings for your music (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
-<img src="WPS.JPG" alt="WPS" width="300">
+<img src="WPS.JPG" alt="WPS" align="left" width="300">
 
 Finally, a little info about the color-logic. Chroma includes some presets that will get you started, but you will likely want to explore your own color combinations. Similar to the tile icon matching, Chroma does its best to determine your color choices, as Rockbox does not give us the ability to mirror your exact choice. 
 
