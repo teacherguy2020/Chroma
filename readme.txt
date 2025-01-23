@@ -1,3 +1,6 @@
+
+![Chroma](Chromapic.jpg "Chroma")
+
 Welcome to Chroma BETA (expect issues)
 
 Chroma is a Rockbox theme built around the idea of giving you extensive color and feature choices. Rather than creating separate themes for light, dark and so on, Chroma gives you nearly unlimited choice over background, foreground, and accent coloration. This is because it uses almost no bitmaps, and the bitmaps that *are* used have alpha. This gives the user thousands of combinations all in the same theme. You can see a superb implementation of the approach in d00k's Themify.
