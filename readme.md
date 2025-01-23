@@ -6,8 +6,6 @@ In addition to color variety, Chroma makes extensive use of Shortcuts to give yo
 
 The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and NeoBeat. Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in laggyness while scrolling the tiles. For a much faster experience I have included two 8-tile desktop presets which will hopefully meet the needs of most users. And as a nod to Apple, I have included a Mac OS miniDock which you can turn on or off. The sbs also includes a nice "Now Playing" tile.
 
-<img src="Desktop.JPG" alt="Desktop" align="right" width="300">
-
 There is a custom Quickscreen (like you see in d00k's and Dreaml1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (Chroma.cfg, for example) and uncomment or add: 
 
 qs top: brightness
@@ -37,6 +35,7 @@ WPS (While Playing Screen)
 * Show/Hide the the WPS when the hold switch is engaged
 
 
+<img src="Desktop.JPG" alt="Desktop" align="right" width="300">
 
 Where to manually install the files:
 
