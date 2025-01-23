@@ -2,7 +2,9 @@
 
 Chroma is a Rockbox theme built around the idea of giving you extensive color and feature choices. Rather than creating separate themes for light, dark and so on, Chroma gives you nearly unlimited choice over background, foreground, and accent coloration. This is because it uses almost no bitmaps, and the bitmaps that *are* used have alpha. This gives the user thousands of combinations all in the same theme. You can see a superb implementation of the approach in d00k's Themify.
 
-In addition to color variety, Chroma makes extensive use of Shortcuts to give you the ability to turn various features on/off. This is done by accessing the lesser-used settings in Rockbox and reapplying them to various theme settings. I learned of this idea from d00k in his adwaitapod series and it is a brilliant way to give the user maximum flexibility in how the theme works for them personnally.
+In addition to color variety, Chroma makes extensive use of Shortcuts to give you the ability to turn various features on/off. This is done by accessing the lesser-used settings in Rockbox and reapplying them to various theme settings. I learned of this idea from d00k in his adwaitapod series and it is a brilliant way to give the user maximum flexibility in how the theme works for them personnally. 
+
+I tried my best to utilize Rockbox settings that are either rarely used or otherwise won't impact your overall experience. Hopefully you'll agree, and maybe not even notice what was used!
 
 
 <img src="Desktop.JPG" alt="Desktop" align="left" width="250">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and NeoBeat. Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in laggyness while scrolling the tiles. For a much faster experience I have included two 8-tile desktop presets which will hopefully meet the needs of most users. 
