@@ -70,6 +70,8 @@ Oh, by the way... if you wish to use ratings for your music (they will show in t
 
 <img src="WPS.JPG" alt="WPS" align="left" width="300">
 
+For the While Playing Screen I really tried to prioritize both the artwork (large!) and info without the need for a ton of scrolling. You will be able to quickly see the artist, album, year, file format and bit rate. And remember, everything is highly customizable, so if you don't like something (like the Wallpaper or track counter) you can turn it off.
+
 Finally, a little info about the color-logic. Chroma includes some presets that will get you started, but you will likely want to explore your own color combinations. Similar to the tile icon matching, Chroma does its best to determine your color choices, as Rockbox does not give us the ability to mirror your exact choice. 
 
 The short story is...if the album artwork corners look pefectly rounded, Chroma has determined and matched your color choice. If not, you could still stick with that background color and turn off rounded corners...up to you. Heck you might prefer square album artwork anyway!
