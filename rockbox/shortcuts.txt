@@ -25,12 +25,38 @@ data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast1.cfg
 name: FAST Desktop 1
 icon: 4
 talkclip: 
+[shortcut]
+type: separator
+data: 
+name:  
+icon: -1
+talkclip: 
+
+[shortcut]
+type: separator
+data: 
+name: Must have bookmarks ON
+icon: -1
+talkclip: 
+
+[shortcut]
+type: separator
+data: 
+name: for this Desktop:
+icon: -1
+talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast2.cfg
 name: FAST Desktop 2
 icon: 4
+talkclip: 
+[shortcut]
+type: separator
+data: 
+name:  
+icon: -1
 talkclip: 
 
 [shortcut]
@@ -71,14 +97,14 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/scrollbarwidth7.cfg
-name: ..miniDock On
+name: miniDock On
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/scrollbarwidth6.cfg
-name: ..miniDock Off
+name: miniDock Off
 icon: 20
 talkclip: 
 
@@ -92,70 +118,70 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/CarAdapterModeOff.cfg
-name: ••Square Album Corners
+name: Square Album Corners
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/YesIcons.cfg
-name: ••Color Icons
+name: Color Icons
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/NoIcons.cfg
-name: ••Monochrome Icons
+name: Monochrome Icons
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/VolumeGraphic.cfg
-name: ••Show Wallpaper in Player
+name: Show Wallpaper in Player
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/VolumeNumeric.cfg
-name: ••Hide Wallpaper in Player
+name: Hide Wallpaper in Player
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/StatusbarTop.cfg
-name: ••Show Track Counter
+name: Show Track Counter
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/StatusbarOff.cfg
-name: ••Hide Track Counter
+name: Hide Track Counter
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/StatusbarBottom.cfg
-name: ••Show Track Counter during Pause
+name: Show Track Counter during Pause
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/TrackTitlePlain.cfg
-name: ••No accent color on Track Title
+name: No accent color on Track Title
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/TrackTitleAccent.cfg
-name: ••Accent color on Track Title
+name: Accent color on Track Title
 icon: 20
 talkclip: 
 

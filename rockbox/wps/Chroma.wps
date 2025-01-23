@@ -115,14 +115,14 @@
 #-- Icon Stuff --#
 # --- Combined Play Mode and Status Icons Row ---
 # Playback and hold status
-%Vl(Player,6,6,64,15,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
+%Vl(Player,6,6,64,15,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
 #
 #battery icons
 %Vl(Player,294,4,21,14,10)%Fl(2,18-0newiconfont.fnt)
 %?bp<%Vf(00ff00)１|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
 %?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
 
-# %Vl(Player,294,4,21,14,10)%Fl(10,18-newiconfont.fnt)
+# %Vl(Player,294,4,21,14,10)%Fl(10,18-0newiconfont.fnt)
 #%?bc<１|>
 
 #
@@ -280,8 +280,8 @@ G
 Vl(LockscreenClock,50,4,30,30,10)
 ?bs<f|>
 # Playback and hold status PROBLEM HERE THIS SHOWS WHEN NOT ON LOCKSCREEN
-# %Vl(LockscreenClock,4,4,60,30,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)F|%if(%mp, =, 1)9|%if(%mp, =, 2)6|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<4|>%?mh<n|>
-%Vl(LockscreenClock,6,6,64,15,10)%Fl(10,18-newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
+# %Vl(LockscreenClock,4,4,60,30,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)F|%if(%mp, =, 1)9|%if(%mp, =, 2)6|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<4|>%?mh<n|>
+%Vl(LockscreenClock,6,6,64,15,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
 #
 #battery
 #battery icons
