@@ -60,7 +60,7 @@ Please note that using Chroma's FAST Desktops means your menu items and order *w
 
 IF your expected number of menu items show and all tile icons match, great! You can use Chroma as-is (with lag) while scrolling the desktop. It's up to you. If you have a specific order you wish to use with FAST scrolling, contact me and I will try to get it added. FAST desktops are the way to go, for sure. Go to Shortcuts and choose one, that's my suggestion.
                       **********************************************                      
-
+Oh, by the way... if you wish to use ratings (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
 Finally, a little info about the color-logic. Chroma includes some presets that will get you started, but you will likely want to explore your own color combinations. Similar to the tile icon matching, Chroma does its best to determine your color choices, as Rockbox does not give us the ability to mirror your exact choice. 
 
