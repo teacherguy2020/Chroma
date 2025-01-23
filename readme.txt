@@ -33,9 +33,9 @@ WPS (While Playing Screen)
 
 Where to manually install the files:
 
-Put the Chroma folder in the root. 
+Put the Chroma Stuff folder NOT in .rockbox but rather the root of your storage. This gives you easy access for making changes. All the shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts.
 
-Put shortcuts.txt in the root as well BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcut.txt in a text editor, copy all of it, and paste into your file above/below your existing shortcuts.
+Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcut.txt in a text editor, copy all of it, and paste into your file above/below your existing shortcuts.
 
 The other files go into .rockbox's directories that bear the same names. So take the fonts from Chroma's font directory and place those in .rockbox/fonts, and so on.
 
