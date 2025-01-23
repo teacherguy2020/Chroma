@@ -1,0 +1,1 @@
+Chroma uses the "Chroma Stuff" directory to handle all theme (cfg) files. So you don't need to put anything into the .rockbox/themes directory.
