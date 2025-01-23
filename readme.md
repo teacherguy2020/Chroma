@@ -1,9 +1,4 @@
-
-
 <img src="Chromapic.jpg" alt="Chroma" align="left" width="500">
-
-This is some text that will wrap around the image. You can add as much text as you want, and it will flow nicely around the image because the `align="left"` attribute pushes the image to the left of the text. Make sure to leave a blank line between the image tag and the paragraph for proper rendering.
-
 
 Welcome to Chroma BETA (expect issues)
 
