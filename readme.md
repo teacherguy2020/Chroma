@@ -1,5 +1,4 @@
-
-![Chroma](Chromapic.jpg)
+Chromapic.jpg
 
 Welcome to Chroma BETA (expect issues)
 
