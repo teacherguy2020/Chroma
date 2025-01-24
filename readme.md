@@ -79,9 +79,7 @@ IF your expected number of menu items show and all tile icons match, great! You 
                                   
 Oh, by the way... if you wish to use ratings for your music (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
-<img src="readme_images/wpsscreen.png" alt="WPS" align="left" width="300">
-
-# Artwork and info matters
+# Artwork and info matters <img src="readme_images/wpsscreen.png" alt="WPS" align="left" width="300">
 
 For the While Playing Screen I really tried to prioritize both the artwork (large!) and info without the need for a ton of scrolling. You will be able to quickly see the artist, album, year, file format and bit rate, and (usually) the entire title, artist and album without any scrolling. There is a wallpaper that adapts to your color choices, and I'm even trying to bring back ratings (turn on "Gather Runtime Info" in the Settings to be able to rate your track). And remember, everything is highly customizable, so if you don't like something (like the Wallpaper or track counter) you can in many cases turn it off.
 
