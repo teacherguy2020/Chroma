@@ -44,6 +44,9 @@ WPS (While Playing Screen)
 * Remove the accent color from the track title
 * Show/Hide the the WPS when the hold switch is engaged
 
+# Please don't try to run this on Rockbox 3.15
+Get the daily version, please.
+
 # Where to manually install the files
 
 The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iPod's storage. This gives you easy access for making changes. All the Chroma shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts.
