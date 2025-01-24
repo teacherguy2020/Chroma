@@ -24,7 +24,7 @@ qs bottom: brightness
 qs left: shuffle
 qs right: repeat
 
-This will give you a more pleasant looking Quickscreen. You can experiment with using your own quickscreen settings instead, but you'll need to edit Chroma.sbs. Like the While Playing Screen and the Desktop(sbs), the Quickscreen adapts to any color scheme you choose.
+This will give you a more pleasant looking Quickscreen. You can experiment with using your own quickscreen settings instead, but you'll need to edit Chroma.sbs. Like the While Playing Screen and the Desktop(sbs), the Quickscreen adapts to any color scheme you choose. And remember... you can access the Shortcuts screen while in the Quickscreen by long-pressing select! So you can show/hide elements easily without having to return to the Desktop.
 
 # Shortcuts drives the experience
 As previously mentioned, the user settings are most easily navigated via Shortcuts and I have included a shortcuts file that you can copy from to add to your shortcut file, or if you don't use Shortcuts you could simply replace your Shortcuts file with Chroma's. The file goes in the root of the .rockbox directory. Changes are handled via .cfg files that reside in Chroma Stuff/Settings.
