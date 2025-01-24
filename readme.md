@@ -70,7 +70,7 @@ Use the menu names display at the top of your display (which will be correct eve
 Please note that using Chroma's FAST Desktops means your menu items and order *will be altered* so this is your decision to make. It is not difficult to change them back for whatever reason, but I just want to be clear that using Chroma may involve altering your menu items/order. Once you see how easy it is to edit them (you don't need to even use the plugin) you will be customizing in no time.
 
 IF your expected number of menu items show and all tile icons match, great! You can use Chroma as-is (with lag) while scrolling the desktop. It's up to you. If you have a specific order you wish to use with FAST scrolling, contact me and I will try to get it added. FAST desktops are the way to go, for sure. Go to Shortcuts and choose 1 or 2, that's my suggestion.
-                      **********************************************   
+
                                          
 Oh, by the way... if you wish to use ratings for your music (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
