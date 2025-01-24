@@ -2,15 +2,18 @@
 
 Chroma is a Rockbox theme built around the idea of giving you extensive color and feature choices. Rather than creating separate themes for light, dark and so on, Chroma gives you nearly unlimited choice over background, foreground, and accent coloration. This is because it uses almost no bitmaps, and the bitmaps that *are* used have alpha. This gives the user thousands of combinations all in the same theme. You can see a superb implementation of the approach in d00k's [Themify](https://github.com/D0-0K/themify).
 
+# Options, Options, Options
 In addition to color variety, Chroma makes extensive use of Shortcuts to give you the ability to turn various features on/off. This is done by accessing the lesser-used settings in Rockbox and reapplying them to various theme settings. I learned of this idea from d00k in his [adwaitapod](https://d00k.net/design/adwaitapod/) series and it is a brilliant way to give the user maximum flexibility in how the theme works for them personnally. 
 
 I tried my best to utilize Rockbox settings that are either rarely used or otherwise won't impact your overall experience. Hopefully you'll agree, and maybe not even notice what was used!
 
-
+# The Desktop
 <img src="readme_images/purple.png" alt="Desktop" align="left" width="250">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and [NeoBeat](https://github.com/Dream1iner/NeoBeat). Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in "laggyness" while scrolling the tiles. For a much faster experience I have included three desktop presets (one of them is all 10 menu choices) which will hopefully meet the needs of most users. The Desktop also includes a nice "Now Playing" tile that will coordinate with your chosen color scheme. If you have more than one iPod Classic with different color faceplates I think you will really enjoy the variety that Chroma provides.
 
+# miniDock
 And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. <img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="200">
 
+# Quickscreen
 There is a custom Quickscreen (like you see in d00k's and Dream1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (ChromaLight.cfg, for example) and uncomment or add: 
 
 qs top: brightness
@@ -22,6 +25,7 @@ qs right: repeat
 
 This will give you a more pleasant looking Quickscreen. You can experiment with using your own quickscreen settings instead, but you'll need to edit Chroma.sbs. Like the While Playing Screen and the Desktop(sbs), the Quickscreen adapts to any color scheme you choose.
 
+# Shortcuts drives the experience
 As previously mentioned, the user settings are most easily navigated via Shortcuts and I have included a shortcuts file that you can copy from to add to your shortcut file, or if you don't use Shortcuts you could simply replace your Shortcuts file with Chroma's. The file goes in the root of the .rockbox directory. Changes are handled via .cfg files that reside in Chroma Stuff/Settings.
 
 Here is a list of the settings you can change in Chroma:
@@ -39,7 +43,7 @@ WPS (While Playing Screen)
 * Remove the accent color from the track title
 * Show/Hide the the WPS when the hold switch is engaged
 
-Where to manually install the files:
+# Where to manually install the files
 
 The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iPod's storage. This gives you easy access for making changes. All the Chroma shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts.
 
@@ -55,13 +59,17 @@ The next step can take some patience. Go to Shortcuts. Choose "Welcome to Chroma
 **** IF YOU READ NOTHING ELSE, PLEASE READ THIS ***** 
 </div>
 
-Important: It is completely possible you will get no tile icons showing. This is because there are hundreds of possible combinations of menu items and orders. Chroma will do its best to match, but no guarantees. But don't worry, workarounds exist from here....
+# Important: 
+
+It is completely possible you will get no tile icons showing. This is because there are hundreds of possible combinations of menu items and orders. Chroma will do its best to match, but no guarantees. But don't worry, workarounds exist from here....
 
 <div align="center">
 **** Prepare for some lag at first ****
 </div>
 
 Expect lag when scrolling desktop icons if you are not using one of Chroma's FAST Desktops. If you have a Gen 5, a LOT of lag at the moment. Might not be usable but that is why we have FAST desktops for you, so read on. If you have a gen 6/7 and you have to have your menus items "just so" then you may be able to live without FAST Desktop layouts. You can even load the default 10-item menu. I think it is a bit confusing in an 8-tile setup, but you can do it. This is the default order by the way: bookmarks, files, database, wps, settings, recording, playlists, plugins, system_menu, shortcuts,
+
+#Troubleshooting
 
 What to do if your icons don't show at all, partially show, or are mismatched: 
 
@@ -70,14 +78,16 @@ Use the menu names display at the top of your display (which will be correct eve
 Please note that using Chroma's FAST Desktops means your menu items and order *will be altered* so this is your decision to make. It is not difficult to change them back for whatever reason, but I just want to be clear that using Chroma may involve altering your menu items/order. Once you see how easy it is to edit them (you don't need to even use the plugin) you will be customizing in no time.
 
 IF your expected number of menu items show and all tile icons match, great! You can use Chroma as-is (with lag) while scrolling the desktop. It's up to you. If you have a specific order you wish to use with FAST scrolling, contact me and I will try to get it added. FAST desktops are the way to go, for sure. Go to Shortcuts and choose 1 or 2, that's my suggestion.
-
-                                         
+                                  
 Oh, by the way... if you wish to use ratings for your music (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
 <img src="readme_images/wpsscreen.png" alt="WPS" align="left" width="300">
 
+# Artwork and ifo matters
+
 For the While Playing Screen I really tried to prioritize both the artwork (large!) and info without the need for a ton of scrolling. You will be able to quickly see the artist, album, year, file format and bit rate. And remember, everything is highly customizable, so if you don't like something (like the Wallpaper or track counter) you can turn it off.
 
+# Create your own Chroma Skins
 Finally, a little info about the color-logic. Chroma includes some presets that will get you started, but you will likely want to explore your own color combinations. Similar to the tile icon matching, Chroma does its best to determine your color choices, as Rockbox does not give us the ability to mirror your exact choice. 
 
 The short story is...if the album artwork corners look pefectly rounded, Chroma has determined and matched your color choice. If not, you could still stick with that background color and turn off rounded corners...up to you. Heck you might prefer square album artwork anyway!
