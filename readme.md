@@ -51,11 +51,15 @@ REBOOT your iPod before you go any further. You'll boot into your current non-Ch
 
 The next step can take some patience. Go to Shortcuts. Choose "Welcome to Chroma" which will launch the default setup and try to assess your menu items and order. This will take a while, especially on a 5th gen.
 
-                  **** IF YOU READ NOTHING ELSE, PLEASE READ THIS *****
+<div align="center">  
+**** IF YOU READ NOTHING ELSE, PLEASE READ THIS ***** 
+</div>
 
 Important: It is completely possible you will get no tile icons showing. This is because there are hundreds of possible combinations of menu items and orders. Chroma will do its best to match, but no guarantees. But don't worry, workarounds exist from here....
 
-                                  **** Prepare for LAG ****
+<div align="center">
+**** Prepare for some lag at first ****
+</div>
 
 Expect lag when scrolling desktop icons if you are not using one of Chroma's FAST Desktops. If you have a Gen 5, a LOT of lag at the moment. Might not be usable but that is why we have FAST desktops for you, so read on. If you have a gen 6/7 and you have to have your menus items "just so" then you may be able to live without FAST Desktop layouts. You can even load the default 10-item menu. I think it is a bit confusing in an 8-tile setup, but you can do it. This is the default order by the way: bookmarks, files, database, wps, settings, recording, playlists, plugins, system_menu, shortcuts,
 
