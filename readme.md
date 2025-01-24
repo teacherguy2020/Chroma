@@ -11,7 +11,7 @@ I tried my best to utilize Rockbox settings that are either rarely used or other
 
 And as a fun nod to the Mac, I have included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. <img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="200">
 
-There is a custom Quickscreen (like you see in d00k's and Dreaml1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (Chroma.cfg, for example) and uncomment or add: 
+There is a custom Quickscreen (like you see in d00k's and Dream1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (Chroma.cfg, for example) and uncomment or add: 
 
 qs top: brightness
 qs bottom: brightness
