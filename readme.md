@@ -11,10 +11,10 @@ I tried my best to utilize Rockbox settings that are either rarely used or other
 <img src="readme_images/purple.png" alt="Desktop" align="left" width="250">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and [NeoBeat](https://github.com/Dream1iner/NeoBeat). Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in "laggyness" while scrolling the tiles. For a much faster experience I have included three desktop presets (one of them is all 10 menu choices) which will hopefully meet the needs of most users. The Desktop also includes a nice "Now Playing" tile that will coordinate with your chosen color scheme. If you have more than one iPod Classic with different color faceplates I think you will really enjoy the variety that Chroma provides.
 
 # miniDock
-<img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="100">And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. 
+<img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="200">And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. 
 
 # Quickscreen
-<img src="readme_images/QS.jpg" alt="quickscreen" align="left" width="100">There is a custom Quickscreen (like you see in d00k's and Dream1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (ChromaLight.cfg, for example) and uncomment or add: 
+<img src="readme_images/QS.jpg" alt="quickscreen" align="left" width="150">There is a custom Quickscreen (like you see in d00k's and Dream1iner's great themes). I didn't want to force the quickscreen settings on the user in case you have your own custom quickscreen items chosen. If you want to use Chroma's custom quickscreen, open the cfg file you are currently using (ChromaLight.cfg, for example) and uncomment or add: 
 
 qs top: brightness
 qs bottom: brightness
@@ -81,9 +81,9 @@ Oh, by the way... if you wish to use ratings for your music (they will show in t
 
 <img src="readme_images/wpsscreen.png" alt="WPS" align="left" width="300">
 
-# Artwork and ifo matters
+# Artwork and info matters
 
-For the While Playing Screen I really tried to prioritize both the artwork (large!) and info without the need for a ton of scrolling. You will be able to quickly see the artist, album, year, file format and bit rate. And remember, everything is highly customizable, so if you don't like something (like the Wallpaper or track counter) you can turn it off.
+For the While Playing Screen I really tried to prioritize both the artwork (large!) and info without the need for a ton of scrolling. You will be able to quickly see the artist, album, year, file format and bit rate, and (usually) the entire title, artist and album without any scrolling. There is a wallpaper that adapts to your color choices, and I'm even trying to bring back ratings (turn on "Gather Runtime Info" in the Settings to be able to rate your track). And remember, everything is highly customizable, so if you don't like something (like the Wallpaper or track counter) you can in many cases turn it off.
 
 # Create your own Chroma Skins
 Finally, a little info about the color-logic. Chroma includes some presets that will get you started, but you will likely want to explore your own color combinations. Similar to the tile icon matching, Chroma does its best to determine your color choices, as Rockbox does not give us the ability to mirror your exact choice. 
