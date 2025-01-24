@@ -138,7 +138,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/CarAdapterModeOn.cfg
-name: ••Rounded Album Corners
+name: Rounded Album Corners
 icon: 20
 talkclip: 
 
