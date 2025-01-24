@@ -118,7 +118,7 @@
 # Different layouts based on viewport needed (tiles, text)
 #use scrollbar width to control whether miniDock shows or not (show with 7)
 %?if(%cs,=,1)<%Vd(TheDocki)%VI(Backstop1)|%VI(Backstop3)>
-%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs,!=,1))<%VI(Backstop2)%Vd(TheDockz)|>
+%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs,!=,1),%if(%cs,!=,10))<%VI(Backstop2)%Vd(TheDockz)|>
 
 %Vi(Backstop1,5,30,-,150,1) #space for player
 %Vi(Backstop2,5,30,-,170,1) #no song playing, dock on
