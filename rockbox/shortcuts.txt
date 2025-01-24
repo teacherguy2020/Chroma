@@ -1,6 +1,6 @@
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/Chroma.cfg
+data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaDark.cfg
 name: Welcome to Chroma (Start Here)
 icon: 18
 talkclip:
@@ -242,8 +242,8 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaDefault.cfg
-name: Chroma Dark
+data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaLight.cfg
+name: Chroma Light
 icon: 4
 talkclip:
 
