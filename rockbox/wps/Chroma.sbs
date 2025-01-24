@@ -1,5 +1,8 @@
 ##Chroma, a color-agnostic theme
 ##by RetiredTeacherGuy, 2025
+##credits to d00k for his insightful use of %St(settings) in order to implement more user choice
+##in adwaitapod, and to Dreaml1ner for his modern implementation of tiles in NeoBeat, and 
+##millim for iRetro!
 
 ### Disable status bar
 %wd
@@ -11,7 +14,6 @@
 %Fl(4,24-Roboto-Bold.fnt)
 %Fl(5,72-albumcorners.fnt)
 %Fl(6,8-Roboto-Bold.fnt)
-#%Fl(7,1-Cantarell-Regular.fnt)
 %Fl(7,05-Tiny.fnt)
 %Fl(9,64-RobotoCondensed-Light.fnt)
 %Fl(11,18-0newiconfont.fnt)
@@ -33,20 +35,10 @@
 %?mh<%xd(LockImage)%VB%Vd(ScreenWipe)%Vd(LockscreenItems)|>
 %?mp<|%?if(%cs,=,1)<%?C<%Cl(19,183,45,45)%Cd|||>>>
 
-#problematic?
-# %?if(%cs, =, 1)<%?mh<%?if(%St(backlight on button hold), !=, off)<%dr(0,0,-,-,ffffff)%xd(Lockscreen)|>|>|>>
-# %?if(%cs, =, 1)<%?mh<|%?mp<%?mm<%dr(190,200,125,32,424142)|%dr(190,200,125,32,3982e7)>%?ps<%dr(190,162,125,32,3982e7)|%dr(190,162,125,32,424142)>|>>>
-
 # When USB plugged in...
 %?if(%cs, =, 21)<%?mh<%xd(LockImage)%Vd(LockscreenItems)|>>
-# %?if(%cs, =, 21)<%?mh<%xd(usbScreen)%Vd(USB)%Vd(TitleBar)|%xd(usbScreen)%Vd(USB)%Vd(TitleBar)>>
 
 %?if(%cs,=,10)<%?and(%if(%St(qs left),=,shuffle),%if(%St(qs right),=,repeat),%if(%St(qs top),=,brightness),%if(%St(qs bottom),=,brightness))<%Vd(QuickButtons)%Vd(Quickscreen)%VI(QuickDefault)%xd(QuickFrame)|>>
-
-# for any Quickscreen choices
-#%?if(%cs,=,10)<%Vd(QuickButtons)%Vd(Quickscreen)%VI(QuickDefault)>
-
-#--- Quickscreen Button Logic ---#
 
 ###### Foreground Layer
 #status bar
@@ -55,16 +47,7 @@
 %xl(M,mainIcons.bmp,0,0,10)
 %xl(S,mainIconsSelector.bmp,0,0,10)
 
-# turn this back on when you reimplment list3
-# %?and(%if(%cs,=,6),%if(%Lt,=,Sound Settings))<%VI(Backstop3)>
-
-#If player in stop mode and user has miniDock on then use short VI, otherwise long VI
-# %?and(%if(%mp,=,0),%if(%ss(0,1,%St(scrollbar width)),=,7))<%VI(Backstop2)|%VI(Backstop3)>
-# %?mp<%VI(Backstop3)|%VI(Backstop)|%VI(Backstop)>
-
-
-
-### Defining what to display KEEP
+### Debug shows %LT in case tiles don't load
 %?and(%if(%cs,!=,10),%if(%cs,!=,21))<%?mh<|%?if(%St(playlist viewer icons),=,on)<%Vd(debug)%Vd(littleclock)|%Vd(DateCentered)%Vd(littleclock)>>>
 
 
@@ -84,7 +67,6 @@
 %ac%?LT<%LT|%Lt>
 
 # Date at the top center
-#note: If this viewport is disabled, tiles slide UP!!
 # color logic for nice variety
 %Vl(DateCentered,80,1,-80,30,4)
 %?if(%cs,=,1)<%?mh<|%ac%ca %cd %cb>|%?if(%cs,=,8)<%acDatabase|%?if(%cs,=,7)<%acFiles|%?Lt<%ac%Lt>>>>
@@ -105,14 +87,9 @@
 %?bp<%Vf(00ff00)１|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
 %?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
 
-
-
-#%?and(%if(%cs,!=,10),%if(%cs,!=,21))<%?mh<|%Vd(littleclock)>>
-
 ## Little Clock, upper left
 %Vl(littleclock,10,5,70,14,2)
 %al%cl:%cM %cp
-
 
 
 # %?if(%ss(0,1,%St(scrollbar width)),=,6)<TRUE|FALSE> %St(scrollbar width)
@@ -126,17 +103,9 @@
 # Clear remnant line from album art/status bar when exiting wps
 # %Vl(Fallback,0,30,-,-,1)
 
-# why can we get a viewport to show text but not list/tiles when coming out of hold?
 # %Vl(DateTime,0,32,-,24,2)%acTap Menu
 
-# interesting
-# %Vl(DateTime,0,30,-,24,2)%Vd(MenuTiles1)
-
 ###########################
-# Universal tile menu setup
-#%V(0,60,-,-,1)
-
-
 #eventual monochrome icons option
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MM,mainIconsMG.bmp,0,0,10)>
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MMS,mainIconsSelectorMG.bmp,0,0,10)>
@@ -151,30 +120,26 @@
 %?if(%cs,=,1)<%Vd(TheDocki)%VI(Backstop1)|%VI(Backstop3)>
 %?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs,!=,1))<%VI(Backstop2)%Vd(TheDockz)|>
 
-#Master Viewport. Sets boundaries for all tile grids and lists
-
 %Vi(Backstop1,5,30,-,150,1) #space for player
 %Vi(Backstop2,5,30,-,170,1) #no song playing, dock on
 %Vi(Backstop3,5,30,-,-,1) #no dock/no player, longest list
 
 
 #Main Desktop Tiles
-# %?if(%Lt,=,Rockbox)<%?mh<|%Lb(MenuTiles1,76,71,tile)%Vd(NowPlaying)>|>
-%?if(%Lt,=,Rockbox)<%?mh<|%Lb(MenuTiles1,76,71,tile)%Vd(NowPlaying)>|>
 
+%?if(%Lt,=,Rockbox)<%?mh<|%Lb(MenuTiles1,76,71,tile)%Vd(NowPlaying)>|>
 
 #Tiles for Settings
 %?and(%if(%cs,=,6),%if(%Lt,=,Settings))<%Vd(Descriptor)%Lb(MenuTiles2,70,70,tile)>
 
-#hopefully temporary display of submenu items in Settings
+# display of submenu items in Settings, needs work
 %?and(%if(%cs,=,6),%if(%Lt,!=,Settings))<%Lb(MenuList3,195,20)>
 
 ############IMPROVED MENU ITEMS MATCHING
-#Note: Removing this viewport gives a single tile-at-time look
+#Note: Removing this viewport gives a single tile-at-time look. Could be useful
 %Vl(MenuTiles1,0,0,82,75,1)
 
-#come back to this.. smaller cropped tiles
-# %Vl(MenuTiles1,0,0,65,65,1)
+#Logic for determining the menu order the user has in place. Taxing. Runs if "car adapter mode" is on, which is the default when the user first loads the theme so as not to change their root menu order until/unless they want to. Probably not usable on Gen 5 iPod.
 
 #Slot 1 - all possibilities
 %?if(%St(car adapter mode),=,on)<%?or(%if(%ss(0,9,%St(root menu order)),=,playlists),%if(%ss(2,9,%St(root menu order)),=,playlists),%if(%ss(3,9,%St(root menu order)),=,playlists))<%?if(%LN,=,1)<%xd(M,5)>%?Lc<%?if(%LN,=,1)<%xd(S,5)>>>>
@@ -297,11 +262,12 @@
 %?if(%St(car adapter mode),=,on)<%?or(%if(%ss(87,3,%St(root menu order)),=,wps),%if(%ss(86,3,%St(root menu order)),=,wps),%if(%ss(85,3,%St(root menu order)),=,wps))<%?if(%LN,=,10)<%xd(M,1)>%?Lc<%?if(%LN,=,10)<%xd(S,1)>>>>
 
 ########################################
-########################################
-########################################
-%?if(%St(car adapter mode),=,off)<%?if(%ss(5,2,%St(root menu order)),=,da)<%Vl(MenuTiles1,0,0,82,75,1)%?if(%LN,=,1)<%xd(M,1)>%?if(%LN,=,2)<%xd(M,3)>%?if(%LN,=,3)<%xd(M,4)>%?if(%LN,=,4)<%xd(M,5)>%?if(%LN,=,5)<%xd(M,6)>%?if(%LN,=,6)<%xd(M,8)>%?if(%LN,=,7)<%xd(M,9)>%?if(%LN,=,8)<%xd(M,10)>%?Lc<%?if(%LN,=,1)<%xd(S,1)>%?if(%LN,=,2)<%xd(S,3)>%?if(%LN,=,3)<%xd(S,4)>%?if(%LN,=,4)<%xd(S,5)>%?if(%LN,=,5)<%xd(S,6)>%?if(%LN,=,6)<%xd(S,8)>%?if(%LN,=,7)<%xd(S,9)>%?if(%LN,=,8)<%xd(S,10)>>>%?if(%ss(5,2,%St(root menu order)),=,bo)<%Vl(MenuTiles1,0,0,82,75,1)%?if(%LN,=,1)<%xd(M,1)>%?if(%LN,=,2)<%xd(M,2)>%?if(%LN,=,3)<%xd(M,3)>%?if(%LN,=,4)<%xd(M,4)>%?if(%LN,=,5)<%xd(M,5)>%?if(%LN,=,6)<%xd(M,6)>%?if(%LN,=,7)<%xd(M,8)>%?if(%LN,=,8)<%xd(M,9)>%?Lc<%?if(%LN,=,1)<%xd(S,1)>%?if(%LN,=,2)<%xd(S,2)>%?if(%LN,=,3)<%xd(S,3)>%?if(%LN,=,4)<%xd(S,4)>%?if(%LN,=,5)<%xd(S,5)>%?if(%LN,=,6)<%xd(S,6)>%?if(%LN,=,7)<%xd(S,8)>%?if(%LN,=,8)<%xd(S,9)>>>>
+#FAST Desktop layouts, based on the root menu order selected in shortcuts, which also turns off car adapter mode so the code above does not run. Zippy.
 
-########################################
+%?if(%St(car adapter mode),=,off)<%?if(%ss(5,2,%St(root menu order)),=,da)<%Vl(MenuTiles1,0,0,82,75,1)%?if(%LN,=,1)<%xd(M,1)>%?if(%LN,=,2)<%xd(M,3)>%?if(%LN,=,3)<%xd(M,4)>%?if(%LN,=,4)<%xd(M,5)>%?if(%LN,=,5)<%xd(M,6)>%?if(%LN,=,6)<%xd(M,8)>%?if(%LN,=,7)<%xd(M,9)>%?if(%LN,=,8)<%xd(M,10)>%?Lc<%?if(%LN,=,1)<%xd(S,1)>%?if(%LN,=,2)<%xd(S,3)>%?if(%LN,=,3)<%xd(S,4)>%?if(%LN,=,4)<%xd(S,5)>%?if(%LN,=,5)<%xd(S,6)>%?if(%LN,=,6)<%xd(S,8)>%?if(%LN,=,7)<%xd(S,9)>%?if(%LN,=,8)<%xd(S,10)>>>%?if(%ss(5,2,%St(root menu order)),=,bo)<%Vl(MenuTiles1,0,0,82,75,1)%?if(%LN,=,1)<%xd(M,1)>%?if(%LN,=,2)<%xd(M,2)>%?if(%LN,=,3)<%xd(M,3)>%?if(%LN,=,4)<%xd(M,4)>%?if(%LN,=,5)<%xd(M,5)>%?if(%LN,=,6)<%xd(M,6)>%?if(%LN,=,7)<%xd(M,8)>%?if(%LN,=,8)<%xd(M,9)>%?Lc<%?if(%LN,=,1)<%xd(S,1)>%?if(%LN,=,2)<%xd(S,2)>%?if(%LN,=,3)<%xd(S,3)>%?if(%LN,=,4)<%xd(S,4)>%?if(%LN,=,5)<%xd(S,5)>%?if(%LN,=,6)<%xd(S,6)>%?if(%LN,=,7)<%xd(S,8)>%?if(%LN,=,8)<%xd(S,9)>>>>|
+%?if(%ss(0,9,%St(root menu order)),=,bookmarks)<%Vl(MenuTiles1,0,0,82,75,1)%?if(%LN,=,1)<%xd(M,2)>%?if(%LN,=,2)<%xd(M,4)>%?if(%LN,=,3)<%xd(M,3)>%?if(%LN,=,4)<%xd(M,1)>%?if(%LN,=,5)<%xd(M,8)>%?if(%LN,=,6)<%xd(M,7)>%?if(%LN,=,7)<%xd(M,5)>%?if(%LN,=,8)<%xd(M,6)>%?if(%LN,=,9)<%xd(M,10)>%?if(%LN,=,10)<%xd(M,9)>%?Lc<%?if(%LN,=,1)<%xd(S,2)>%?if(%LN,=,2)<%xd(S,4)>%?if(%LN,=,3)<%xd(S,3)>%?if(%LN,=,4)<%xd(S,1)>%?if(%LN,=,5)<%xd(S,8)>%?if(%LN,=,6)<%xd(S,7)>%?if(%LN,=,7)<%xd(S,5)>%?if(%LN,=,8)<%xd(S,6)>%?if(%LN,=,9)<%xd(S,10)>%?if(%LN,=,10)<%xd(S,9)>>>>
+#########################################
+
 #Settings Menu Viewport
 %Vl(MenuTiles2,0,0,80,80,1)%?Lc<%xd(SS,%LN)|%xd(SM,%LN)>
 
@@ -365,8 +331,7 @@
 
 # shuffle for little square
 %Vl(NowPlaying,254,210,30,16,11)
-#there is still a carriage return error in here, but you don't see it because of the viewport height and extra G
-# %?ps<%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>|%Vf(-)G>
+
 %?ps<%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
@@ -392,9 +357,7 @@
 %xl(dockhalf,dock.bmp,0,18)
 
 %Vl(TheDockz,10,200,-12,30,-)
-#animation effect for pop up mini dock
-# %t(.1)%x(a,dock.bmp,0,27);%t(.1)%x(b,dock.bmp,0,20);%t(999)%x(c,dock.bmp,0,0)
-# %t(.1)%x(a,dock.bmp,0,18);%t(.1)%t(999)%x(c,dock.bmp,0,0)
+#animation effect for pop up mini dock. turn off miniDock if scrollbar width is set to 7 (default)
 %t(.1)%xd(docksub);%t(.1)%xd(dockhalf);%t(999)%xd(dockfull)
 
 %?if(%cs,=,8)<%t(1.5)%Vd(TheDocki);%Vd(TheDockb)|>
@@ -405,12 +368,6 @@
 %?if(%cs,=,16)<%t(1.5)%Vd(TheDocki);%Vd(TheDockh)|>
 %?if(%cs,=,18)<%t(1.5)%Vd(TheDocki)%Vd(TheDocka)>
 %?if(%cs,=,19)<%t(1.5)%Vd(TheDocki);%Vd(TheDockg)|>
-
-# %Vl(TheDockAnimateA,10,186,-12,-,-)
-# %x(e,dock.bmp,0,20)
-
-# %Vl(TheDockAnimateB,10,186,-12,-,-)
-# %x(f,dock.bmp,0,10)
 
 
 %Vl(TheDocka,61,234,10,6,5)%Vf(737473) #find playlists
@@ -433,17 +390,7 @@
 %Vl(TheDocki,0,234,-,-,0)
 
 
-# %V(100,180,-,60,2)
-# %Vp(0,%it)
-# %al %cs LT: %LT Lt: %Lt
-#Lt: %Lt LT: %LT LI: %LI  LR: %LR LC: %LC
-##########################
-
-
-
 #------------ Lockscreen Layer ------------#
-# %x(y,Wallpaper.bmp,0,0)
-
 #%Vl(LockRefresh,0,0,175,207,-)
 
 %Vl(LockscreenItems,0,0,150,30,11)
