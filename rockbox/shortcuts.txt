@@ -1,7 +1,7 @@
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaDev.cfg
-name: Chroma Developer
+data: /<HDD0>/Chroma Stuff/Chroma Skins/Chroma.cfg
+name: Welcome to Chroma (Start Here)
 icon: 18
 talkclip:
 
