@@ -249,6 +249,14 @@ talkclip:
 
 [shortcut]
 type: file
+data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaDark.cfg
+name: Chroma Dark
+icon: 4
+talkclip:
+
+
+[shortcut]
+type: file
 data: /<HDD0>/Chroma Stuff/Chroma Skins/ac.Steel.White.Sky.cfg
 name: Steel
 icon: 4
@@ -265,13 +273,6 @@ talkclip:
 type: file
 data: /<HDD0>/Chroma Stuff/Chroma Skins/ac.Purple.cfg
 name: Purple
-icon: 4
-talkclip: 
-
-[shortcut]
-type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/Chroma.cfg
-name: Gloss White
 icon: 4
 talkclip: 
 
