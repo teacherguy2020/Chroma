@@ -60,6 +60,33 @@ icon: -1
 talkclip: 
 
 [shortcut]
+type: separator
+data: 
+name: Use 3 if you need
+icon: -1
+talkclip: 
+
+[shortcut]
+type: separator
+data: 
+name: more than 8 tiles
+icon: -1
+talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast3.cfg
+name: FAST Desktop 3
+icon: 4
+talkclip: 
+[shortcut]
+type: separator
+data: 
+name:  
+icon: -1
+talkclip: 
+
+[shortcut]
 type: browse
 data: /<HDD0>/Chroma Stuff/Desktop Presets/
 name: All Desktop Presets
