@@ -91,7 +91,7 @@ talkclip:
 [shortcut]
 type: separator
 data: 
-name:  Now go check it out!
+name:  4. Go check it out!
 icon: -1
 talkclip: 
 
@@ -120,6 +120,13 @@ talkclip:
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsOFF.cfg
 name: Date on, Debug off
+icon: 20
+talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Settings/Quickscreen.cfg
+name: Get custom Quickscreen
 icon: 20
 talkclip: 
 
