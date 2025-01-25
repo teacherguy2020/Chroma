@@ -8,7 +8,7 @@ In addition to color variety, Chroma makes extensive use of Shortcuts to give yo
 I tried my best to utilize Rockbox settings that are either rarely used or otherwise won't impact your overall experience. Hopefully you'll agree, and maybe not even notice what was used!
 
 # The Desktop
-<img src="readme_images/purple.png" alt="Desktop" align="left" width="250">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and [NeoBeat](https://github.com/Dream1iner/NeoBeat). Each tile is connected to a menu item. While you *can* try to use more than 8 tiles, Chroma works best with 8. Chroma will do its best to work with your current menu items and order. The logic involved with trying to determine the user's menu order is pretty extensive, and results in "laggyness" while scrolling the tiles. For a much faster experience I have included three desktop presets (one of them is all 10 menu choices) which will hopefully meet the needs of most users. The Desktop also includes a nice "Now Playing" tile that will coordinate with your chosen color scheme. If you have more than one iPod Classic with different color faceplates I think you will really enjoy the variety that Chroma provides.
+<img src="readme_images/purple.png" alt="Desktop" align="left" width="250">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and [NeoBeat](https://github.com/Dream1iner/NeoBeat). Each tile is connected to a menu item. Unfortunately due to the lack of processing power, Chroma is unable to determine your exactly menu order. BUT I have included three desktop presets (one of them is all 10 menu choices), one of which will hopefully meet your needs. The Desktop also includes a nice "Now Playing" tile that will coordinate with your chosen color scheme. If you have more than one iPod Classic with different color faceplates I think you will really enjoy the variety that Chroma provides.
 
 # miniDock
 <img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="125">And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. 
@@ -53,35 +53,21 @@ The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iP
 
 Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcut.txt in a text editor, copy all of it, and paste into your shortcut file above/below your existing shortcuts.
 
-The other files go into .rockbox's various directories that bear the same names. So copy the fonts files from Chroma's font directory (don't just drag/drop the folder) and paste those in .rockbox/fonts, and so on.
+The other files go into .rockbox's various directories that bear the same names. So copy the fonts files from Chroma's font directory (don't just drag/drop the folder) and paste those in .rockbox/fonts, copy Chroma.cfg to the themes directory, and so on.
 
-REBOOT your iPod before you go any further. You'll boot into your current non-Chroma theme, but this is fine. We need the shortcuts file to update, which it will after reboot.
+REBOOT your iPod before you go any further. You'll boot into your current non-Chroma theme, but this is fine. We need the shortcuts file to update, which it will after a reboot.
 
-The next step can take some patience. Go to Shortcuts. Choose "Welcome to Chroma" which will launch the default setup and try to assess your menu items and order. This will take a while, especially on a 5th gen.
+Go to Shortcuts. Choose "Welcome to Chroma" which will launch the default setup. Next, choose one of the three Desktops. They are:
 
-<div align="center">  
-**** IF YOU READ NOTHING ELSE, PLEASE READ THIS ***** 
-</div>
+Desktop 1: root menu order: wps, database, files, recording, plugins, playlists, settings, shortcuts,
 
-# Important: 
+Desktop 2: root menu order: files, wps, database, playlists, plugins, bookmarks, settings, shortcuts,
 
-It is completely possible you will get no tile icons showing. This is because there are hundreds of possible combinations of menu items and orders. Chroma will do its best to match, but no guarantees. But don't worry, workarounds exist from here....
-
-<div align="center">
-**** Prepare for some lag at first ****
-</div>
-
-Expect lag when scrolling desktop icons if you are not using one of Chroma's FAST Desktops. If you have a Gen 5, a LOT of lag at the moment. Might not be usable but that is why we have FAST desktops for you, so read on. If you have a gen 6/7 and you have to have your menus items "just so" then you may be able to live without FAST Desktop layouts. You can even load the default 10-item menu. I think it is a bit confusing in an 8-tile setup, but you can do it. This is the default order by the way: bookmarks, files, database, wps, settings, recording, playlists, plugins, system_menu, shortcuts,
+Desktop 3: root menu order: bookmarks, files, database, wps, settings, recording, playlists, plugins, system_menu, shortcuts,
 
 #Troubleshooting
 
-What to do if your icons don't show at all, partially show, or are mismatched: 
-
-Use the menu names display at the top of your display (which will be correct even if the tile icons are not) get to Shortcuts and selet it. From here you will need to choose one of Chroma's built-in FAST layouts. Layout 1 does not use Bookmarks, and Layout 2 requires it. I'll be working on more FAST Desktop layouts.
-
-Please note that using Chroma's FAST Desktops means your menu items and order *will be altered* so this is your decision to make. It is not difficult to change them back for whatever reason, but I just want to be clear that using Chroma may involve altering your menu items/order. Once you see how easy it is to edit them (you don't need to even use the plugin) you will be customizing in no time.
-
-IF your expected number of menu items show and all tile icons match, great! You can use Chroma as-is (with lag) while scrolling the desktop. It's up to you. If you have a specific order you wish to use with FAST scrolling, contact me and I will try to get it added. FAST desktops are the way to go, for sure. Go to Shortcuts and choose 1 or 2, that's my suggestion.
+Please note that using Chroma's Desktops means your menu items and order *may be altered* so this is your decision to make. It is not difficult to change them back for whatever reason, but I just want to be clear that using Chroma may involve altering your menu items/order. Once you see how easy it is to edit them (you don't need to even use the plugin) you will be customizing in no time.
                                   
 Oh, by the way... if you wish to use ratings for your music (they will show in the star) don't forget to go to Database --> Gather Runtime Data --> Yes. Now, when you are listening to a track you can long press the Select button and "Set Song Rating."
 
