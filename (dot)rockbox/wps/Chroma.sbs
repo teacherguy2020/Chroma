@@ -148,7 +148,7 @@
 #### Layout 1 - WPS first. ###################################
 
 #Set the overall grid divisors if Layout 1
-%?and(%if(%St(car adapter mode),=,off),%if(%ss(0,1,%St(root menu order)),=,w),%if(%cs,=,1))<%Lb(MenuTiles1,76,71,tile)%Vd(NowPlaying)>
+%?and(%if(%St(car adapter mode),=,off),%if(%ss(0,1,%St(root menu order)),=,w),%if(%cs,=,1))<%Lb(MenuTiles1,80,71,tile)%Vd(NowPlaying)>
 
 
 #### Layout 2 - Files first. ###################################
