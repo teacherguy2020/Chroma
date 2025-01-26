@@ -206,10 +206,10 @@
 
 
 # #little square
-%Vl(NowPlaying,238,180,60,60,5)
+%Vl(NowPlaying,250,180,60,60,5)
 %?C<P>
 # lossless for little square
-%Vl(NowPlaying,244,188,46,16,11)
+%Vl(NowPlaying,254,188,46,16,11)
 %?C<d>
 
 #color logic for nice variety
@@ -227,7 +227,7 @@
 
 
 # shuffle for little square
-%Vl(NowPlaying,248,210,30,16,11)%?C<G|>
+%Vl(NowPlaying,258,210,30,16,11)%?C<G|>
 %?ps<%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
@@ -242,7 +242,7 @@
 # %?ps<%?C<%alG>|%?C<%Vf(-)%alG>>
 
 # repeat for little square
-%Vl(NowPlaying,272,210,17,16,11)
+%Vl(NowPlaying,282,210,17,16,11)
 %?mm<%Vf(-)|
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%?mm<E|{|`|E|E>>
