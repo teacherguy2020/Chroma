@@ -173,32 +173,41 @@
 #%?Lc<%s+>%xd(TI,%LI(2))    %LT
 %?Lc<%Vs(invert)%s%LT|%s%LT>
 
-###############################
+#####################################################
 # Now Playing Viewports
-
-%Vl(NowPlaying,10,180,240,-,5)
+#OG %Vl(NowPlaying,10,180,240,-,5)
+%Vl(NowPlaying,10,180,50,50,5)
 %?C<R>
+#endcap
+%Vl(NowPlaying,257,180,60,50,5)
+%?C<V>
 
 # track artist
-%Vl(NowPlaying,67,181,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
-%?C<%?mh<*|%s%ia>>
+#OG %Vl(NowPlaying,67,181,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,60,181,-63,49,4)%Vf(-)%Vb(-)%Vs(invert)
+%?C<%?mh< |%s%al %ia>>
+%?C<%?mh< | >>
+%?C<%?mh< | >>
+
 
 # track title
-%Vl(NowPlaying,67,202,148,16,3)%Vf(-)%Vb(-)%Vs(invert)
-%?C<%?mh<*|%s%it>>
+%Vl(NowPlaying,60,202,-63,15,3)%Vf(-)%Vb(-)%Vs(invert)
+%?C<%?mh<*|%s  %it>>
 
-# progress bar
-%Vl(NowPlaying,67,222,148,7,0)
+
+
+# progress bar #
+%Vl(NowPlaying,67,222,170,7,0)
 #color logic for nice variety
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%?mh<*|%pb>>
 
 
 # #little square
-%Vl(NowPlaying,250,180,60,60,5)
-%?C<P>
+#%Vl(NowPlaying,250,180,60,60,5)
+#%?C<P>
 # lossless for little square
-%Vl(NowPlaying,254,188,46,16,11)
+%Vl(NowPlaying,266,187,16,16,11)
 %?C<d>
 
 #color logic for nice variety
@@ -215,7 +224,7 @@
 %?mp<%Vf(-)|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>||>
 
 #play/pause for little ssquare
-%Vl(NowPlaying,284,189,20,18,11)
+%Vl(NowPlaying,290,189,14,16,11)
 %?C<%?mp<h|k|l>>
 
 #color logic for nice variety
@@ -233,7 +242,7 @@
 
 
 # shuffle for little square
-%Vl(NowPlaying,258,210,30,16,11)%?C<G|>
+%Vl(NowPlaying,266,210,30,14,11)%?C<G|>
 %?ps<%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
@@ -248,7 +257,7 @@
 # %?ps<%?C<%alG>|%?C<%Vf(-)%alG>>
 
 # repeat for little square
-%Vl(NowPlaying,282,210,17,16,11)
+%Vl(NowPlaying,286,210,17,16,11)
 %?mm<%Vf(-)|
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%?mm<E|{|`|E|E>>
