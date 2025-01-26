@@ -188,7 +188,7 @@
 # Now Playing Viewports
 
 %Vl(NowPlaying,10,180,240,-,5)
-%?C<F>
+%?C<R>
 
 # track artist
 %Vl(NowPlaying,67,180,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
@@ -224,6 +224,23 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 %?mp<%Vf(-)|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>||>
+
+#play/pause for little ssquare
+%Vl(NowPlaying,284,189,20,18,11)
+%?C<%?mp<h|k|l>>
+
+#color logic for nice variety
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+
 
 
 # shuffle for little square
