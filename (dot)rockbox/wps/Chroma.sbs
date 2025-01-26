@@ -27,21 +27,21 @@
 %xl(QuickFrame,quickscreenframe.bmp)
 
 
-#------------ Background Layer ------------#
+#------------ Background Layer ----------------#
 %V(0,0,-,-,-)%VB
-%xd(Frame)
+#%xd(Frame)
 
 
-
-%?mh<%xd(LockImage)%VB%Vd(ScreenWipe)%Vd(LockscreenItems)|>
-%?mp<|%?if(%cs,=,1)<%?C<%Cl(13,183,45,45)%Cd|||>>>
+%?mh<%xd(LockImage)%VB%Vd(LockscreenItems)%Vd(NowPlaying)|>
+%?mp<|%?if(%cs,=,1)<%?C<%Cl(13,183,45,45)%Cd|>||>>
 
 # When USB plugged in...
-%?if(%cs, =, 21)<%?mh<%xd(LockImage)%Vd(LockscreenItems)|>>
+%?if(%cs, =, 21)<%?mh<%xd(LockImage)%VB%Vd(LockscreenItems)|%xd(LockImage)%VB%Vd(LockscreenItems)>>
+
 
 %?if(%cs,=,10)<%?and(%if(%St(qs left),=,shuffle),%if(%St(qs right),=,repeat),%if(%St(qs top),=,brightness),%if(%St(qs bottom),=,brightness))<%Vd(QuickButtons)%Vd(Quickscreen)%VI(QuickDefault)%xd(QuickFrame)|>>
 
-###### Foreground Layer
+###### Foreground Layer. #####
 #status bar
 %V(0,0,-,30,4)
 
@@ -192,15 +192,15 @@
 %?C<R>
 
 # track artist
-%Vl(NowPlaying,67,181,152,26,4)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,67,180,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
 %?C<%s%ia>
 
 # track title
-%Vl(NowPlaying,67,202,152,16,3)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,67,202,148,16,3)%Vf(-)%Vb(-)%Vs(invert)
 %?C<%s%it>
 
 # progress bar
-%Vl(NowPlaying,67,222,152,7,0)
+%Vl(NowPlaying,67,222,148,7,0)
 #color logic for nice variety
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%pb>
@@ -319,10 +319,12 @@
 # disk access
 %?lh<%t(0.1)p;%t(0.1)p;%t(0.1)o;%t(0.1)p|>
 
+# Day Month Date #
+%Vl(LockscreenItems,0,31,-,-,4)%ac%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>%, %?cm<January|February|March|April|May|June|July|August|September|October|November|December> %cd
 
 
 # large time
-%Vl(LockscreenItems,0,50,-,100,9)
+%Vl(LockscreenItems,0,80,-,-,9)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
@@ -335,14 +337,20 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 %ac%?cf<%cH:%cM|%cl:%cM %cP>
-
-# Day Month Date
-%Vl(LockscreenItems,0,30,-,24,4)%ac%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>%, %?cm<January|February|March|April|May|June|July|August|September|October|November|December>
+%ac
+%ac
 
 # Playback and hold status
 %Vl(LockscreenItems,6,6,64,15,11)%?mp<%if(%mp, =, 0)|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
 
-#------------ Quickscreen Layer ------------#
+#cover stock USB graphic
+%Vl(LockscreenItems,0,145,-,60,1)
+%ac%?if(%cs, =, 21)<• USB Connected •|•••>
+#cover stock USB graphic
+%Vl(LockscreenItems,0,190,-,30,1)
+%ac%?if(%bp, =, p)<• Charger Connected •|•••>
+
+#------------ Quickscreen Layer --------------------#
 #--- Default Quickscreen ---#
 # make default quickscreen small
 %Vi(QuickDefault,5,205,30,30,7)
