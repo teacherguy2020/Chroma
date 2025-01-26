@@ -103,7 +103,7 @@
 # additional icons for the Settings Screen
 %xl(SM,settingsIcons.bmp,0,0,8)
 %xl(SS,settingsIconsSelector.bmp,0,0,8)
-%xl(TI,ChromaIcons.bmp,-1,4,32)
+%xl(TI,ChromaIcons.bmp,0,2,32)
 
 # Different layouts based on viewport needed (tiles, text)
 #use scrollbar width to control whether miniDock shows or not (show with 7)
@@ -115,7 +115,7 @@
 %Vi(Backstop2,0,30,-,170,1) #no song playing, dock on
 %Vi(Backstop3,0,30,-,-,1) #no dock/no player, longest list
 
-##############################################
+################################################
 
 #Tiles for Settings
 %?and(%if(%cs,=,6),%if(%Lt,=,Settings))<%Vd(Descriptor)%Lb(MenuTiles2,70,70,tile)>
@@ -170,10 +170,10 @@
 %Vl(ScreenWipe,0,0,-,-,-)
 
 %Vl(MenuList3,15,5,-15,-,1)%Vf(-)
-%?Lc<%s+>%xd(TI,%LI(2))  %LT
+#%?Lc<%s+>%xd(TI,%LI(2))    %LT
+%?Lc<%Vs(invert)%s%LT|%s%LT>
 
-
-########################
+###############################
 # Now Playing Viewports
 
 %Vl(NowPlaying,10,180,240,-,5)
