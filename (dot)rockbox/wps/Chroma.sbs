@@ -192,7 +192,7 @@
 %?C<R>
 
 # track artist
-%Vl(NowPlaying,67,180,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,67,181,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
 %?C<%s%ia>
 
 # track title
