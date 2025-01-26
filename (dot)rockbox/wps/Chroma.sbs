@@ -29,7 +29,7 @@
 
 #------------ Background Layer ----------------#
 %V(0,0,-,-,-)%VB
-#%xd(Frame)
+%xd(Frame)
 
 
 %?mh<%xd(LockImage)%VB%Vd(LockscreenItems)%Vd(NowPlaying)|>
