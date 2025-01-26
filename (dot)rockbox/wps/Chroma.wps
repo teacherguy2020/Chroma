@@ -30,7 +30,9 @@
 #
 #
 #current master
-%?mh<%?if(%St(battery display),=,graphic)<%Vd(LockscreenClock)%x(y,Wallpaper.bmp,0,0)|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%?if(%St(volume display),=,graphic)<%x(n,gradient.bmp,0,0)%Vd(Slider)>%?if(%St(statusbar), =,top)<%Vd(count)>>|%?if(%St(volume display),!=,graphic)<%x(q,frame.bmp,0,0)%Vd(Slider)>%?mp<|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%Vd(Repeat)%?if(%St(volume display),=,graphic)<%x(m,gradient.bmp,0,0)>%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(a)%Cd%Vd(f)%Vd(g)%Vd(Player)%Vd(CornersSmall)%Vd(clock)%?if(%St(statusbar), =,bottom)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)>>
+#battery display = graphic = lockscreen image
+#volume display = graphic = wps backdrop image
+%?mh<%?if(%St(battery display),=,graphic)<%Vd(LockscreenClock)%x(y,Wallpaper.bmp,0,0)|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%?if(%St(volume display),=,graphic)<%x(n,gradient.bmp,0,0)%Vd(Slider)>%?if(%St(statusbar), =,top)<%Vd(count)>>|%?if(%St(volume display),!=,graphic)<%x(q,frame.bmp,0,0)%Vd(Slider)>%?mp<|%Vd(c)%Vd(b)%Cd%Vd(CornersLarge)%Vd(Player)%Vd(Slider)%Vd(Repeat)%?if(%St(volume display),=,graphic)<%x(m,gradient.bmp,0,0)%Vd(Slider)>%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(a)%Cd%Vd(f)%Vd(g)%Vd(Player)%Vd(CornersSmall)%Vd(clock)%?if(%St(statusbar), =,bottom)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)%?if(%St(statusbar), =,top)<%Vd(count)>|%Vd(c)%Vd(b)%Cd%VB%Vd(CornersLarge)%Vd(Slider)>>
 
 
 # %?rr<|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|>
@@ -280,7 +282,7 @@ G
 %Vl(LockFlush,0,0,-,-,-)
 %Vl(LockFlush,4,30,175,207,-)
 %Vl(LockscreenClock,0,0,-,-,-)
-%Vl(LockscreenClock,4,30,175,207,-)
+%Vl(LockscreenClock,4,30,175,-,-)
 #sleep timer and moon icon
 Vl(LockscreenClock,50,4,30,30,10)
 ?bs<f|>
@@ -312,7 +314,12 @@ Vl(LockscreenClock,50,4,30,30,10)
 %Vl(LockscreenClock,278,2,13,18,10)
 %ac%?lh<%t(0.3)q;%t(0.3)p;%t(0.3)o;%t(0.3)p|>
 %?lh<%t(0.1)p;%t(0.1)p;%t(0.1)o;%t(0.1)p|>
-#
+
+###
+#cover stock USB graphic
+#%Vl(LockscreenClock,0,110,-,-,1)
+#%ac Info: %ia %it
+
 #
 #------------ Always on Display ------------#
 %Vl(AlwaysOnDisplay,0,0,-,-,-)
