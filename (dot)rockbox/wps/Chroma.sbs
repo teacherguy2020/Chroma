@@ -1,3 +1,4 @@
+#SBS
 ##Chroma, a color-agnostic theme
 ##by RetiredTeacherGuy, 2025
 ##credits to d00k for his insightful use of %St(settings) in order to implement more user choice
@@ -7,7 +8,7 @@
 ### Disable status bar ##
 %wd
 
-###### Fonts #
+###### Fonts ###
 
 %Fl(2,16-Roboto-Bold.fnt)
 %Fl(3,16-Roboto-Regular.fnt)
@@ -75,8 +76,8 @@
 #Battery, Upper Right##
 %Vl(littleclock,294,3,21,14,11)
 %?if(%bc,=,c)<１|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
-#if the battery is not fully charged, show green on the charging icon
-%?if(%bc,=,c)<%Vf(00ff00)>
+#if the battery is not fully charged but charging, show green on the charging icon
+%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
 
 ## Little Clock, upper left
 %Vl(littleclock,10,5,55,14,2)
@@ -323,7 +324,7 @@
 #if the battery is not fully charged, show green on the charging icon
 #%?if(%bc,=,c)<%Vf(00ff00)>
 %?if(%bp,=,p)<%?if(%bc,=,c)<１|j>|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
-%?if(%bc,=,c)<%Vf(00ff00)>
+%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
 #%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
 
 
@@ -335,7 +336,7 @@
 %Vl(LockscreenItems,0,31,-,-,4)%ac%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>%, %?cm<January|February|March|April|May|June|July|August|September|October|November|December> %cd
 
 
-# large time
+# large time clock
 %Vl(LockscreenItems,0,80,-,-,9)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
@@ -349,8 +350,7 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 %ac%?cf<%cH:%cM|%cl:%cM %cP>
-%ac
-%ac
+%ac•
 
 # Playback and hold status
 %Vl(LockscreenItems,6,6,64,15,11)%?mp<%if(%mp, =, 0)|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
@@ -382,7 +382,7 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 
-%ac%?if(%bc, =, c)<• Charging •| >
+%ac%?if(%bp, =, p)<• Charger Attached•| >
 
 #------------ Quickscreen Layer --------------------###
 #--- Default Quickscreen ---#
