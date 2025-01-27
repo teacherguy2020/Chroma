@@ -231,7 +231,7 @@ C
 #remember to include %ac for the number
 %Vl(Slider,300,159,8,9,10)%Vb(-)%Vf(-)(%Vs(invert)
 # %?if(%rr,<,10)<%ac%?rr<Ð|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|>|>
-%ac%?rr<q|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|q>
+%ac%?rr< |Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù| >
 
 |%Vd(Slider)>
 # zero character is Ð
