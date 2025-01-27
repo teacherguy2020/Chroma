@@ -217,7 +217,7 @@
 #%Vl(NowPlaying,250,180,60,60,5)
 #%?C<P>
 # lossless for little square
-%Vl(NowPlaying,266,187,16,16,11)
+%Vl(NowPlaying,266,190,16,16,11)
 %?C<d>
 
 #color logic for nice variety
@@ -234,7 +234,7 @@
 %?mp<%Vf(-)|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>|%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<%acd|%Vf(-)%acd>||>
 
 #play/pause for little ssquare
-%Vl(NowPlaying,290,189,14,16,11)
+%Vl(NowPlaying,287,189,14,16,11)
 %?C<%?mp<h|k|l>>
 
 #color logic for nice variety
