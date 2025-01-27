@@ -396,10 +396,10 @@
 %Vl(Quickscreen,0,0,-,-,2)
 
 #-- Left --#
-%Vl(Quickscreen,32,113,77,19,2)
+%Vl(Quickscreen,28,113,77,19,2)
 %s%ar%St(qs left) %?ps<on|off>
 #-- Right --#
-%Vl(Quickscreen,211,113,70,19,2)
+%Vl(Quickscreen,215,113,70,19,2)
 %s%al%St(qs right) %?mm<off|all|1|shuffle|a-b>
 #-- top --# 
 %Vl(QuickButtons,12,48,-10,19,2)
