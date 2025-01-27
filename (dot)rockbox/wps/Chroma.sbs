@@ -173,18 +173,18 @@
 #%?Lc<%s+>%xd(TI,%LI(2))    %LT
 %?Lc<%Vs(invert)%s%LT|%s%LT>
 
-#####################################################
+######################################################
 # Now Playing Viewports
 #OG %Vl(NowPlaying,10,180,240,-,5)
-%Vl(NowPlaying,10,180,50,50,5)
+%Vl(NowPlaying,10,180,50,52,5)
 %?C<R>
 #endcap
-%Vl(NowPlaying,257,180,60,50,5)
+%Vl(NowPlaying,257,180,60,52,5)
 %?C<V>
 
 # track artist
-#OG %Vl(NowPlaying,67,181,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
-%Vl(NowPlaying,60,181,-63,49,4)%Vf(-)%Vb(-)%Vs(invert)
+#OG %Vl(NowPlaying,67,180,148,26,4)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,60,180,-63,51,4)%Vf(-)%Vb(-)%Vs(invert)
 %?C<%?mh< |%s%al %ia>>
 %?C<%?mh< | >>
 %?C<%?mh< | >>
@@ -197,7 +197,7 @@
 
 
 # progress bar #
-%Vl(NowPlaying,67,222,170,7,0)
+%Vl(NowPlaying,67,220,170,6,0)
 #color logic for nice variety
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%?mh<*|%pb>>
