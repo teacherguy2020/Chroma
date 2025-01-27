@@ -7,7 +7,7 @@
 ### Disable status bar
 %wd
 
-###### Fonts
+###### Fonts #
 
 %Fl(2,16-Roboto-Bold.fnt)
 %Fl(3,16-Roboto-Regular.fnt)
@@ -159,9 +159,9 @@
 %Vl(MenuTiles4,0,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
 
 
-#Size/placement of each "viewport" inside of grid MenuTiles3
+#Size/placement of each "viewport" inside of grid MenuTiles3 ##
 #Layout 3
-%Vl(MenuTiles3,0,0,71,71,1)%?Lc<%xd(RS,%LN)|%xd(R,%LN)>
+%Vl(MenuTiles3,0,0,80,71,1)%?Lc<%xd(RS,%LN)|%xd(R,%LN)>
 
 
 #Settings Menu Viewport
@@ -193,7 +193,7 @@
 
 # track artist
 
-%Vl(NowPlaying,60,181,-63,25,4)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,60,182,-63,25,4)%Vf(-)%Vb(-)%Vs(invert)
 %?C<%?mh< |%s%al %ia>>
 #%?C<%?mh< | >>
 #%?C<%?mh< | >>
@@ -267,7 +267,7 @@
 # %?ps<%?C<%alG>|%?C<%Vf(-)%alG>>
 
 # repeat for little square
-%Vl(NowPlaying,286,210,17,16,11)
+%Vl(NowPlaying,285,210,16,16,11)
 %?mm<%Vf(-)|
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 %?C<%?mm<E|{|`|E|E>>
