@@ -109,7 +109,7 @@
 # Different layouts based on viewport needed (tiles, text)
 #use scrollbar width to control whether miniDock shows or not (show with 7)
 %?if(%cs,=,1)<%Vd(TheDocki)%VI(Backstop1)|%VI(Backstop3)>
-%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs,!=,1),%if(%cs,!=,10))<%VI(Backstop2)%Vd(TheDockz)|>
+%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs,!=,1),%if(%cs,!=,2))<%VI(Backstop2)%Vd(TheDockz)|>
 
 #All tile and text layouts reside inside of these...
 %Vi(Backstop1,0,30,-,150,1) #space for player
@@ -382,7 +382,7 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 
-%ac%?if(%bc, =, c)<• Charger Connected •| >
+%ac%?if(%bc, =, c)<• Charging •| >
 
 #------------ Quickscreen Layer --------------------###
 #--- Default Quickscreen ---#
