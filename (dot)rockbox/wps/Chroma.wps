@@ -122,7 +122,7 @@
 #-- Icon Stuff --#
 # --- Combined Play Mode and Status Icons Row ---
 # Playback and hold status
-%Vl(Player,6,6,64,15,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<m|>%?mh<n|>%?bs<f|>
+%Vl(Player,6,6,64,15,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
 #
 #battery icons
 %Vl(Player,294,4,21,14,10)%Fl(2,18-0newiconfont.fnt)
