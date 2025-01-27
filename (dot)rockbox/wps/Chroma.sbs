@@ -4,7 +4,7 @@
 ##in adwaitapod, and to Dream1iner for his modern implementation of tiles in NeoBeat, and 
 ##millim for iRetro!
 
-### Disable status bar
+### Disable status bar ##
 %wd
 
 ###### Fonts #
@@ -223,7 +223,7 @@
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
@@ -240,7 +240,7 @@
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
@@ -255,7 +255,7 @@
 %Vl(NowPlaying,266,210,30,14,11)%?C<G|>
 %?ps<%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
@@ -264,12 +264,23 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>|%Vf(-)%?C<G|>>
 
+# %Vf(8FB5F1)>>>>>>>>>|%Vf(-)%?C<G|>>
+
 # %?ps<%?C<%alG>|%?C<%Vf(-)%alG>>
 
 # repeat for little square
 %Vl(NowPlaying,285,210,16,16,11)
 %?mm<%Vf(-)|
-%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
 %?C<%?mm<E|{|`|E|E>>
 
 %Vl(TheDock,10,186,-12,-,-)

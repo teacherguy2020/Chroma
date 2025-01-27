@@ -162,7 +162,7 @@
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
@@ -180,7 +180,7 @@
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(0000ff)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
 %?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
