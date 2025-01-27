@@ -382,7 +382,7 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 
-%ac%?if(%bc, =, c)<• Charging •| >
+%ac%?if(%bc, =, c)<• Charger Connected •| >
 
 #------------ Quickscreen Layer --------------------###
 #--- Default Quickscreen ---#
