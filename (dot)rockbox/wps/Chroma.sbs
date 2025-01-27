@@ -28,13 +28,13 @@
 %xl(QuickFrame,quickscreenframe.bmp)
 
 
-#------------ Background Layer ----------------#
+#------------ Background Layer ----------------##
 %V(0,0,-,-,-)%VB
 %xd(Frame)
 
 
 %?mh<%xd(LockImage)%VB%Vd(LockscreenItems)%Vd(NowPlaying)|>
-%?mp<|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>||>
+%?mp<%?if(%cs, =, 1)<%Vd(hello)>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>||>
 
 # When USB plugged in...
 %?if(%cs, =, 21)<%?mh<%xd(LockImage)%VB%Vd(LockscreenItems)|%xd(LockImage)%VB%Vd(LockscreenItems)>>
@@ -310,8 +310,11 @@
 #dot clearing
 %Vl(TheDocki,0,234,-,-,0)
 
+#hello
+%Vl(hello,0,180,-10,53,5)
+%?C<|%acI>
 
-#------------ Lockscreen Layer ------------############
+#------------ Lockscreen Layer ------------#############
 #%Vl(LockRefresh,0,0,175,207,-)
 
 %Vl(LockscreenItems,0,0,150,30,11)
