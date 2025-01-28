@@ -136,20 +136,20 @@
 
 
 
-#### Layout 1 - WPS first. ###################################
+#### Layout 1 - WPS first. #####################################
 
 #Set the overall grid divisors if Layout 1
-%?and(%if(%St(car adapter mode),=,off),%if(%ss(0,1,%St(root menu order)),=,w),%if(%cs,=,1))<%Lb(MenuTiles1,80,71,tile)%Vd(NowPlaying)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%cs,=,1))<%Lb(MenuTiles1,80,71,tile)%Vd(NowPlaying)>
 
 
 #### Layout 2 - Files first. ###################################
 #Set the overall grid divisors if Layout 2
-%?and(%if(%St(car adapter mode),=,off),%if(%ss(0,1,%St(root menu order)),=,f),%if(%cs,=,1))<%Lb(MenuTiles4,76,71,tile)%Vd(NowPlaying)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%cs,=,1))<%Lb(MenuTiles4,76,71,tile)%Vd(NowPlaying)>
 
 
 # Layout 3 - Bookmarks first (10 icons)
 #Set the overall grid divisors if Layout 3
-%?and(%if(%St(car adapter mode),=,off),%if(%ss(0,1,%St(root menu order)),=,b),%if(%cs,=,1))<%Lb(MenuTiles3,62,71,tile)%Vd(NowPlaying)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%cs,=,1))<%Lb(MenuTiles3,62,71,tile)%Vd(NowPlaying)>
 
 
 #Size of each "viewport" inside of grid MenuTiles1
@@ -340,7 +340,7 @@
 
 
 # large time clock
-%Vl(LockscreenItems,0,80,-15,-,9)
+%Vl(LockscreenItems,0,80,-,-,9)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
@@ -352,10 +352,11 @@
 %?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
-%ac%?cf<%cH:%cM|%cl:%cM %cP>
-%ac•
+%ac%cl:%cM %cp 
+7
+7
 
-# Playback and hold status
+# Playback and hold status #
 %Vl(LockscreenItems,6,6,64,15,11)%?mp<%if(%mp, =, 0)|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
 
 #cover stock USB graphic
