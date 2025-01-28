@@ -21,6 +21,7 @@
 #This blots out the status bar
 %V(0,0,-,-,-)%VB
 #%Cl(75,6,170,170)%VB
+%xl(Wallpaper,Wallpaper.bmp,0,0)
 
 #
 #
@@ -36,13 +37,15 @@
 #volume display = graphic = wps backdrop image
 #car adapter mode = on = rounded album corners
 
-%?or(%if(%mp, <, 3),%if(%mp, >, 3))<%Vd(c)%Cl(75,6,170,170)%VB%Cd%?if(%St(volume display), =, graphic)<%xd(f)|%xd(u)>%?if(%St(car adapter mode), =, on)<%Vd(CornersLarge)>%Vd(Player)%?if(%St(statusbar), =,top)<%Vd(count)>%Vd(Star)%Vd(Slider)%Vd(Shuffle)>
-###
+%?mh<%?if(%St(battery display), =, graphic)<%Vd(c)%xd(Wallpaper)%Vd(LockscreenClock)|%?or(%if(%mp, <, 3),%if(%mp, >, 3))<%Vd(c)%Cl(75,6,170,170)%VB%Cd%?if(%St(volume display), =, graphic)<%xd(f)|%xd(u)>%?if(%St(car adapter mode), =, on)<%Vd(CornersLarge)>%Vd(Player)%?if(%St(statusbar), =,top)<%Vd(count)>%Vd(Star)%Vd(Slider)%Vd(Shuffle)>>|%?or(%if(%mp, <, 3),%if(%mp, >, 3))<%Vd(c)%Cl(75,6,170,170)%VB%Cd%?if(%St(volume display), =, graphic)<%xd(f)|%xd(u)>%?if(%St(car adapter mode), =, on)<%Vd(CornersLarge)>%Vd(Player)%?if(%St(statusbar), =,top)<%Vd(count)>%Vd(Star)%Vd(Slider)%Vd(Shuffle)>>
+
+####
 #Rockbox quirk means pause has to be reffered to as 3 instead of 2
 %?if(%mp, =, 3)<%Vd(CornersSmall)%Cd%VB%Vd(Player)%Vd(clock)%?if(%St(statusbar), =,bottom)<%Vd(count)>%Vd(Slider)%Vd(Shuffle)>
 #%?and(%if(%St(car adapter mode), =, on),%if(%mp, =, 2))<%Vd(CornersLarge)>
 ########
 
+#%?if(%mh, =, h)<%Vd(LockscreenClock)>
 
 # %?rr<|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|%Vd(Rating)|>
 #%?mh<|%?if(%rr,!=,10)<%Vd(Star)%Vd(Rating)|%Vd(Star)>>
@@ -113,9 +116,10 @@
 %Vl(Player,6,6,64,15,10)%Fl(10,18-0newiconfont.fnt)%?mp<%if(%mp, =, 0)v|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
 #
 #battery icons
-%Vl(Player,294,4,21,14,10)%Fl(2,18-0newiconfont.fnt)
-%?bp<%Vf(00ff00)１|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
-%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
+%Vl(Player,294,4,21,14,10)
+%?if(%bc,=,c)<１|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
+#if the battery is not fully charged but charging, show green on the charging icon
+%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
 
 # %Vl(Player,294,4,21,14,10)%Fl(10,18-0newiconfont.fnt)
 #%?bc<１|>
@@ -280,8 +284,9 @@ Vl(LockscreenClock,50,4,30,30,10)
 #battery
 #battery icons
 %Vl(LockscreenClock,294,4,21,14,10)
-%?bp<|%?if(%bl,<,11)<%Vf(FF0000)|%?if(%bl,<,31)<%Vf(FFFF00)|%Vf(-)>>>|
-%?bp<%Vf(00ff00)１|%Vf(-)%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
+%?if(%bc,=,c)<１|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
+#if the battery is not fully charged but charging, show green on the charging icon
+%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
 
 #
 ##

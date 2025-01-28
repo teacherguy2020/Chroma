@@ -231,7 +231,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Settings/BatteryNumeric.cfg
-name: No Wallpaper on Lockscreen
+name: Show WPS on Lockscreen
 icon: 20
 talkclip: 
 
