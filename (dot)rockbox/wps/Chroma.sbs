@@ -33,7 +33,7 @@
 %xd(Frame)
 
 
-%?mh<%xd(LockImage)%VB%Vd(LockscreenItems)%Vd(NowPlaying)|>
+%?mh<%xd(LockImage)%VB%Vd(LockscreenItems)%Vd(NowPlaying)|%Vd(Remind)>
 %?mp<%?if(%cs, =, 1)<%Vd(hello)>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>||>
 
 # When USB plugged in...
@@ -95,9 +95,9 @@
 # Clear remnant line from album art/status bar when exiting wps
 # %Vl(Fallback,0,30,-,-,1)
 
-# %Vl(DateTime,0,32,-,24,2)%acTap Menu
+%Vl(Remind,0,32,-,24,2)%acTap Menu
 
-###########################
+#########################
 #eventual monochrome icons option
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MM,mainIconsMG.bmp,0,0,10)>
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MMS,mainIconsSelectorMG.bmp,0,0,10)>
