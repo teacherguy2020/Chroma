@@ -317,7 +317,7 @@
 #------------ Lockscreen Layer ------------#############
 #%Vl(LockRefresh,0,0,175,207,-)
 
-#%Vl(LockscreenItems,0,0,150,30,11)
+%Vl(LockscreenItems,0,0,150,30,11)
 # sleep timer %?bs<f|>
 
 # battery icons
