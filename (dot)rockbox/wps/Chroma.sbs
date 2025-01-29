@@ -165,7 +165,7 @@
 
 #Size of each "viewport" inside of grid MenuTiles1
 #This handles Layout 1
-%Vl(MenuTiles1,0,0,80,80,1)%?mh<|%?Lc<%xd(WS,%LN)|%xd(W,%LN)>>
+%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?Lc<%xd(WS,%LN)|%xd(W,%LN)>>
 
 #Size of each "viewport" inside of grid MenuTiles4
 #This handles Layout 2
@@ -371,8 +371,8 @@
 # Playback and hold status #
 %Vl(LockscreenItems,6,6,64,15,11)%?mp<%if(%mp, =, 0)|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
 
-#cover stock USB graphic
-%Vl(LockscreenItems,0,165,-,60,1)
+#cover stock USB graphic##
+%Vl(LockscreenItems,0,216,-,-,1)
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
@@ -386,7 +386,7 @@
 %ac%?if(%cs, =, 21)<• USB Connected •| >
 
 #cover stock USB graphic##
-%Vl(LockscreenItems,0,190,-,30,1)
+%Vl(LockscreenItems,0,190,-,22,1)
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
