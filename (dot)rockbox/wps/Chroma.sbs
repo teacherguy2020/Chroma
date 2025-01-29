@@ -398,7 +398,7 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 %ac%?if(%bp, =, p)<• Charger Connected •| >
-%Vl(Remind,0,32,-,-,1)%acTap Menu or Scroll
+#%Vl(Remind,0,32,-,-,1)%acTap Menu or Scroll
 #------------ Quickscreen Layer --------------------#####
 #--- Default Quickscreen ---#
 # make default quickscreen small
