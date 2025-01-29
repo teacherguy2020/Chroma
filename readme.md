@@ -51,7 +51,7 @@ Get the daily version, please.
 
 The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iPod's storage. This gives you easy access for making changes. All the Chroma shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts. And trust me... using the Shortcuts is key to a great Chroma experience.
 
-Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcut.txt in a text editor, copy all of it, and paste into your shortcut file above/below your existing shortcuts.
+Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcuts.txt in a text editor, copy all of it, and paste into your shortcut file above/below your existing shortcuts. If you do not have a shortcuts.txt in your .rockbox directory, then you are fine to just drop mine in there.
 
 The other files go into .rockbox's various directories that bear the same names. So copy the fonts files from Chroma's font directory (don't just drag/drop the folder) and paste those in .rockbox/fonts, copy Chroma.cfg to the themes directory, and so on.
 
