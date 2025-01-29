@@ -119,7 +119,7 @@
 
 #miniDock
 #%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs, !=, 1),%if(%cs, !=, 10),%if(%cs, !=, 21),%if(%cs, !=, 2))<%VI(Backstop2)%Vd(TheDockz)|%VI(Backstop1)>
-%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs, !=, 1),%if(%cs, !=, 10))<%VI(Backstop2)%Vd(TheDockz)|%?if(%cs, =, 1)<%VI(Backstop1)|%VI(Backstop3)>>
+%?and(%if(%ss(0,1,%St(scrollbar width)),=,7),%if(%cs, !=, 1),%if(%cs, !=, 10),%if(%cs, !=, 2))<%VI(Backstop2)%Vd(TheDockz)|%?if(%cs, =, 1)<%VI(Backstop1)|%VI(Backstop3)>>
 
 
 #All tile and text layouts reside inside of these...
@@ -223,7 +223,7 @@
 %Vl(NowPlaying,66,222,182,5,0)
 #color logic for nice variety
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
-%?C<%?mh<*|%pb>>
+%?C<%?mh<*|%?if(%cs, !=, 10)<%pb>>>
 
 
 # #little square
@@ -325,7 +325,7 @@
 %Vl(hello,0,180,-10,53,5)
 %?C<|%acI>
 
-#------------ Lockscreen Layer ------------#############
+#------------ Lockscreen Layer ------------###########
 #%Vl(LockRefresh,0,0,175,207,-)
 %Vl(lockstatusbar,0,0,-,30,4)
 %Vl(LockscreenItems,0,0,150,30,11)
@@ -402,11 +402,15 @@
 #------------ Quickscreen Layer --------------------####
 #--- Default Quickscreen ---#
 # make default quickscreen small
-%Vi(QuickDefault,-65,-65,30,30,7)
+%Vi(QuickDefault,0,210,30,30,7)
+
 
 # color the default quickscreen font same as background, small QS is "visible but now has camo
 %?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940000)|%?if(%ss(0,2,%St(background color)),>=,82)<%Vf(842020)|%?if(%ss(0,2,%St(background color)),>=,60)<%Vf(731010)|%Vf(631010)|*>>>>>|%?if(%ss(0,2,%St(background color)),>=,73)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949600)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848200)|%Vf(737100)>>>>>>%?if(%ss(2,2,%St(background color)),>=,50)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),>=,94)<%Vf(009400)|%?if(%ss(2,2,%St(background color)),>=,84)<%Vf(008400)|%?if(%ss(2,2,%St(background color)),>=,73)<%Vf(007300)|%Vf(006300)>>>|%Vf(00ff00)>>>%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),>=,94)<%Vf(000094)|%?if(%ss(4,2,%St(background color)),>=,84)<%Vf(000084)|%?if(%ss(4,2,%St(background color)),>=,73)<%Vf(000073)|%Vf(000063)>>>|%Vf(428294)>>>%?if(%ss(0,2,%St(background color)),<,73)<%?if(%ss(2,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),<,73)<%?if(%ss(4,2,%St(background color)),>=,50)<%Vf(000050)|%?if(%ss(4,2,%St(background color)),>=,40)<%Vf(000040)|%?if(%ss(4,2,%St(background color)),>=,28)<%Vf(000031)|%Vf(632021)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(940094)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(840084)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(730073)|%Vf(630063)>>>>>>%?if(%ss(0,2,%St(background color)),>=,60)<%?if(%ss(2,2,%St(background color)),>=,60)<%?if(%ss(4,2,%St(background color)),>=,60)<%?if(%ss(0,2,%St(background color)),>=,94)<%Vf(949694)|%?if(%ss(0,2,%St(background color)),>=,84)<%Vf(848684)|%?if(%ss(0,2,%St(background color)),>=,73)<%Vf(737573)|%Vf(FF0000)>>>>>>%?if(%ss(0,6,%St(background color)),=,000000)<%Vf(000000)|%?if(%ss(0,6,%St(background color)),=,101010)<%Vf(000000)>>%?if(%ss(0,6,%St(background color)),=,ffffff)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,f7f7f7)<%Vf(FFFFFF)|%?if(%ss(0,6,%St(background color)),=,ff0000)<%Vf(FF0000)|%?if(%ss(0,6,%St(background color)),=,00ff00)<%Vf(00FF00)|%?if(%ss(0,6,%St(background color)),=,0000ff)<%Vf(0000FF)|%?if(%ss(0,6,%St(background color)),=,ffff00)<%Vf(FFFF00)|%?if(%ss(0,6,%St(background color)),=,ff00ff)<%Vf(FF00FF)|%?if(%ss(0,6,%St(background color)),=,00ffff)<%Vf(00FFFF)>>>>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500000)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400000)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300000)|%Vf(200000)>>>|%Vf(ff00ff)>>>>%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<,50)<%?if(%ss(4,2,%St(background color)),<,50)<%?if(%ss(2,2,%St(background color)),>=,50)<%Vf(005000)|%?if(%ss(2,2,%St(background color)),>=,40)<%Vf(004000)|%?if(%ss(2,2,%St(background color)),>=,30)<%Vf(003000)|%Vf(002000)>>>|%Vf(103463)>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,50)<%?if(%ss(0,2,%St(background color)),>=,50)<%Vf(500050)|%?if(%ss(0,2,%St(background color)),>=,40)<%Vf(400040)|%?if(%ss(0,2,%St(background color)),>=,30)<%Vf(300030)|%Vf(200020)>>>|%Vf(ff6600)>>>>>%?if(%ss(0,2,%St(background color)),>=,18)<%?if(%ss(2,2,%St(background color)),>=,18)<%?if(%ss(4,2,%St(background color)),>=,18)<%?if(%ss(0,2,%St(background color)),<,60)<%?if(%ss(2,2,%St(background color)),<,60)<%?if(%ss(4,2,%St(background color)),<,60)<%?if(%ss(0,2,%St(background color)),<=,40)<%Vf(404040)|>>|%Vf(428294)>>>>>>
-#A
+
+%Vl(Quickscreen,0,210,30,30,1)%Vb(-)
+%ac  
+%ac  
 # Backdrop for our replacement Quickscreen
 %Vl(Quickscreen,0,0,-,-,2)
 
