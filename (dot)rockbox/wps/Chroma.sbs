@@ -127,7 +127,7 @@
 %Vi(Backstop2,0,30,-,170,1) #no song playing, dock on
 %Vi(Backstop3,0,30,-,-,1) #no dock/no player, longest list
 
-%Vl(Remind,0,32,-,-,1)%acTap Menu or Scroll
+
 ################################################
 
 #Tiles for Settings
@@ -398,8 +398,8 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 %ac%?if(%bp, =, p)<• Charger Connected •| >
-
-#------------ Quickscreen Layer --------------------####
+%Vl(Remind,0,32,-,-,1)%acTap Menu or Scroll
+#------------ Quickscreen Layer --------------------#####
 #--- Default Quickscreen ---#
 # make default quickscreen small
 %Vi(QuickDefault,0,210,30,30,7)
