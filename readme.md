@@ -1,9 +1,9 @@
 <img src="readme_images/3iPods.png" alt="trio" align="left" width="500">Welcome to Chroma BETA
 
-Chroma is a Rockbox theme built around the idea of giving you extensive color and feature choices. Rather than creating separate themes for light, dark and so on, Chroma gives you nearly unlimited choice over background, foreground, and accent coloration. This is because it uses almost no bitmaps, and the bitmaps that *are* used have alpha. This gives the user thousands of combinations all in the same theme. You can see a superb implementation of the approach in d00k's [Themify](https://github.com/D0-0K/themify).
+Chroma is a Rockbox theme built around the idea of giving you extensive color and feature choices. Rather than creating separate themes for light, dark and so on, Chroma gives you nearly unlimited choice over background, foreground, and accent coloration. This is because it uses almost no bitmaps, and the bitmaps that *are* used have an alpha channel. This gives the user thousands of combinations all in the same theme. You can see a superb implementation of the approach in d00k's [Themify](https://github.com/D0-0K/themify).
 
 # Options, Options, Options
-In addition to color variety, Chroma makes extensive use of Shortcuts to give you the ability to turn various features on/off. This is done by accessing the lesser-used settings in Rockbox and reapplying them to various theme settings. I learned of this idea from d00k in his [adwaitapod](https://d00k.net/design/adwaitapod/) series and it is a brilliant way to give the user maximum flexibility in how the theme works for them personnally. 
+In addition to color variety, Chroma makes extensive use of options Shortcuts to give you the ability to turn various features on/off. This is done by accessing the lesser-used settings in Rockbox and reapplying them to various theme settings. I learned of this idea from d00k in his [adwaitapod](https://d00k.net/design/adwaitapod/) series and it is a brilliant way to give the user maximum flexibility in how the theme works for them personnally. 
 
 I tried my best to utilize Rockbox settings that are either rarely used or otherwise won't impact your overall experience. Hopefully you'll agree, and maybe not even notice what was used!
 
@@ -49,9 +49,9 @@ Get the daily version, please.
 
 # Where to manually install the files
 
-The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iPod's storage. This gives you easy access for making changes. All the Chroma shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts.
+The "Chroma Stuff" folder does NOT go in .rockbox but rather the root of your iPod's storage. This gives you easy access for making changes. All the Chroma shortcuts expect this path, so if you decide to move Chroma Stuff you will need to update the shortcuts. And trust me... using the Shortcuts is key to a great Chroma experience.
 
-Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcut.txt in a text editor, copy all of it, and paste into your shortcut file above/below your existing shortcuts.
+Put shortcuts.txt in .rockbox BUT only if you are going to replace your existing shortcuts.txt! Please don't say I didn't warn you! If you have shortcuts that you use regularly, open Chroma's shortcuts.txt in a text editor, copy all of it, and paste into your shortcut file above/below your existing shortcuts. If you do not have a shortcuts.txt in your .rockbox directory, then you are fine to just drop mine in there.
 
 The other files go into .rockbox's various directories that bear the same names. So copy the fonts files from Chroma's font directory (don't just drag/drop the folder) and paste those in .rockbox/fonts, copy Chroma.cfg to the themes directory, and so on.
 
