@@ -22,6 +22,10 @@
 ###### Lock screen Images
 %xl(Frame,frame.bmp)
 %xl(LockImage,Wallpaper.bmp)
+# additional icons for the Settings Screen
+%xl(SM,settingsIcons.bmp,0,0,8)
+%xl(SS,settingsIconsSelector.bmp,0,0,8)
+%xl(TI,ChromaIcons.bmp,0,2,32)
 
  
 # QS screen Images
@@ -64,14 +68,20 @@
 %?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
-%ac%?LT<%LT|%Lt>
+%?if(%cs, =, 1)<%ac%ca %cd %cb|%ac%Lt>
+
+####
 
 
-
-# #Date at the top center
+# #Date at the top center ##
 # color logic for nice variety
-%Vl(DateCentered,80,1,-80,30,4)
-%?if(%cs,=,1)<%?mh<|%ac%ca %cd %cb>|%?if(%cs,=,8)<%acDatabase|%?if(%cs,=,7)<%acFiles|%?Lt<%ac%Lt>>>>
+%Vl(DateCentered,60,1,-60,30,4)
+%?if(%ss(0,1,%St(scrollbar width)),=,7)<%?and(%if(%Lt, !=, Files),%if(%Lt, !=, Database),%if(%Lt, !=, Select Bookmark),%if(%Lt, !=, Playlist Catalogue),%if(%Lt, !=, Settings),%if(%Lt, !=, Recording),%if(%Lt, !=, Plugins),%if(%Lt, !=, Shortcuts),%if(%Lt, !=, System),%if(%Lt, !=, Rockbox))<%ac%Lt|%ac%ca %cd %cb>|%?if(%cs, !=, 1)<%ac%Lt|%ac%ca %cd %cb>>
+#%?if(%cs,=,1)<%?mh<|%ac%ca %cd %cb>|%?Lt<%ac%LT %Lt|>>
+#%?if(%cs,=,1)<%ac%ca %cd %cb|%?and(%if(%Lt, !=, Files),%if(%Lt, !=, Database),%if(%Lt, !=, Select Bookmark),%if(%Lt, !=, Playlist Catalogue),%if(%Lt, !=, Settings),%if(%Lt, !=, Recording),%if(%Lt, !=, Plugins),%if(%Lt, !=, Shortcuts),%if(%Lt, !=, System))<%ac%Lt|>>
+#%?and(%if(%Lt, !=, Files),%if(%Lt, !=, Database),%if(%Lt, !=, Select Bookmark),%if(%Lt, !=, Playlist Catalogue),%if(%Lt, !=, Settings),%if(%Lt, !=, Recording),%if(%Lt, !=, Plugins),%if(%Lt, !=, Shortcuts),%if(%Lt, !=, System),%if(%Lt, !=, Rockbox))<%ac%Lt|%ac%ca %cd %cb>
+
+
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
 
 #Battery, Upper Right##
@@ -108,10 +118,6 @@
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MM,mainIconsMG.bmp,0,0,10)>
 # %?if(%ss(0,6,%St(show icons)),=,off)<%xl(MMS,mainIconsSelectorMG.bmp,0,0,10)>
 
-# additional icons for the Settings Screen
-%xl(SM,settingsIcons.bmp,0,0,8)
-%xl(SS,settingsIconsSelector.bmp,0,0,8)
-%xl(TI,ChromaIcons.bmp,0,2,32)
 
 # Different layouts based on viewport needed (tiles, text)
 #use scrollbar width to control whether miniDock shows or not (show with 7)
@@ -136,7 +142,7 @@
 
 
 # display of submenu items in Settings, needs work
-%?and(%if(%cs,=,6),%if(%Lt,!=,Settings))<%Lb(MenuList3,195,20)>
+%?and(%if(%cs,=,6),%if(%Lt,!=,Settings))<%Lb(MenuList3,195,18)>
 #Load three strips for preset layouts
 %xl(W,wpsIcons.bmp,0,0,8)
 %xl(WS,wpsIconsSelected.bmp,0,0,8)
@@ -182,11 +188,16 @@
 
 %Vl(ScreenWipe,0,0,-,-,-)
 
-%Vl(MenuList3,15,5,-15,-,1)%Vf(-)
-#%?Lc<%s+>%xd(TI,%LI(2))    %LT
-%?Lc<%Vs(invert)%s%LT|%s%LT>
+%Vl(MenuList3,35,5,-15,-,1)%Vf(-)
+%xd(TI,%LI)    %s%LT
+#%?Lc<%xd(TI,3)>
 
-#########################################################
+%Vl(MenuList3,15,5,20,-,1)%Vf(-)
+#%xd(TI,%LI)    %s%LT
+%?Lc<%xd(TI,3)>
+#%?Lc<%Vs(invert)%s%LT|%s%LT>
+
+######################################################
 # Now Playing Viewports
 #OG %Vl(NowPlaying,10,180,240,-,5)
 #left endcap
