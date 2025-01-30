@@ -23,7 +23,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast1.cfg
-name: ••Desktop 1 (8 icons)
+name: ••Desktop 1 (8)
 icon: 4
 talkclip: 
 [shortcut]
@@ -50,7 +50,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast2.cfg
-name: ••Desktop 2 (8 icons)
+name: ••Desktop 2 (8)
 icon: 4
 talkclip: 
 [shortcut]
@@ -77,7 +77,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast3.cfg
-name: ••Desktop 3 (10 icons)
+name: ••Desktop 3 (10)
 icon: 4
 talkclip: 
 
@@ -122,6 +122,21 @@ data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsOFF.cfg
 name: Date on, Debug off
 icon: 20
 talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Settings/USBbrowser.cfg
+name: OS X Desktop
+icon: 20
+talkclip: 
+
+[shortcut]
+type: file
+data: /<HDD0>/Chroma Stuff/Settings/USBmultimedia.cfg
+name: Color Desktop
+icon: 20
+talkclip: 
+
 
 [shortcut]
 type: file
