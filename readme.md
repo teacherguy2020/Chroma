@@ -11,7 +11,7 @@ I tried my best to utilize Rockbox settings that are either rarely used or other
 <img src="readme_images/purple.png" alt="Desktop" align="left" width="150"><img src="readme_images/10Tiles.png" alt="Desktop2" align="right" width="150">The sbs screen (which I'm calling the Desktop) is based on tiles, used cleverly in themes like iRetro and [NeoBeat](https://github.com/Dream1iner/NeoBeat). Each tile is connected to a menu item. Unfortunately due to the lack of processing power, Chroma is unable to determine your exactly menu order. BUT I have included three desktop presets (one of them is all 10 menu choices), one of which will hopefully meet your needs. The Desktop also includes a nice "Now Playing" tile that will coordinate with your chosen color scheme. If you have more than one iPod Classic with different color faceplates I think you will really enjoy the variety that Chroma provides.
 
 # miniDock
-<img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="125">And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. 
+<img src="readme_images/miniDock.jpg" alt="miniDock" align="right" width="125">And as a fun nod to the Mac, I have also included a Mac OS miniDock which you can turn on or off. It even (sort of?) animates up from the bottom of the screen. Might be laggy on the 5th gen, see what you think. I get a kick out of it, but again... you can show it or not. There's also a nod to OS X with an included desktop background. Again... you can show it or not.
 
 
 
@@ -90,5 +90,5 @@ There's still a fair amount to be done, especially work on the lockscreen/usb sc
 
 I hope you enjoy Chroma BETA.
 
-
+<img src="readme_images/hello.png" alt="WPS" align="left" width="320">
 
