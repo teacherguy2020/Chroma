@@ -23,7 +23,7 @@ talkclip:
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast1.cfg
-name: ••Desktop 1 (8)
+name: ••Desktop 1 (8 icons)
 icon: 4
 talkclip: 
 [shortcut]
@@ -43,14 +43,14 @@ talkclip:
 [shortcut]
 type: separator
 data: 
-name: for this Desktop:
+name:  for this Desktop:
 icon: -1
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast2.cfg
-name: ••Desktop 2 (8)
+name: ••Desktop 2 (8 icons)
 icon: 4
 talkclip: 
 [shortcut]
@@ -70,14 +70,14 @@ talkclip:
 [shortcut]
 type: separator
 data: 
-name: need more than 8 tiles
+name:  need more than 8 tiles
 icon: -1
 talkclip: 
 
 [shortcut]
 type: file
 data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast3.cfg
-name: ••Desktop 3 (10)
+name: ••Desktop 3 (10 icons)
 icon: 4
 talkclip: 
 
@@ -325,6 +325,6 @@ talkclip:
 type: file
 data: /.rockbox/rockbox.ipod
 name: Reboot
-icon: 31
+icon: 5
 talkclip: 
 
