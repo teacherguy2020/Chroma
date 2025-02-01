@@ -66,6 +66,8 @@ Desktop 2: root menu order: files, wps, database, playlists, plugins, bookmarks,
 
 Desktop 3: root menu order: bookmarks, files, database, wps, settings, recording, playlists, plugins, system_menu, shortcuts,
 
+Please note that you *must* have Bookmarks enabled to use Layout 2 or 3. Go to Settings, General Settings, Bookmarks to enable. Now your icon should match properly.
+
 #Troubleshooting
 
 Please note that using Chroma's Desktops means your menu items and order *may be altered* so this is your decision to make. It is not difficult to change them back for whatever reason, but I just want to be clear that using Chroma may involve altering your menu items/order. Once you see how easy it is to edit them (you don't need to even use the plugin) you will be customizing in no time.
