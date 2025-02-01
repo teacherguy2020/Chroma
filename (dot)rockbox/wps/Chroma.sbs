@@ -45,7 +45,7 @@
 %?and(%if(%cs, !=, 10),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB%Vd(clear)|%?if(%cs, !=, 10)<%xd(Frame)%VB>%Vd(clear)>
 
 
-%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>>|>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd>>|>||>
+%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>>|>|%?if(%cs,=,1)<%?C<%?mh<*|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>>|>||>
 
 #Quickscreen
 %?if(%cs,=,10)<%?and(%if(%St(qs left),=,shuffle),%if(%St(qs right),=,repeat),%if(%St(qs top),=,brightness),%if(%St(qs bottom),=,brightness))<%Vd(QuickButtons)%Vd(Quickscreen)%VI(QuickDefault)%xd(QuickFrame)|>>
