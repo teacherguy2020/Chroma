@@ -70,7 +70,7 @@ talkclip:
 [shortcut]
 type: separator
 data: 
-name:  need more than 8 tiles
+name:  use all 10 menu items
 icon: -1
 talkclip: 
 
