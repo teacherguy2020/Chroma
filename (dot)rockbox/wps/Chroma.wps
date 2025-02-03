@@ -150,7 +150,7 @@
 %ar%pc
 # SLIDER and color logic#
 %Vl(Slider,100,230,120,8,-)
-%pb(0,0,120,8,-,slider,-)
+%pb(0,0,120,4,-,-,noborder)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|

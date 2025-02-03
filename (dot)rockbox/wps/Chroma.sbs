@@ -16,7 +16,8 @@
 %Fl(5,72-albumcorners.fnt)
 %Fl(6,8-Roboto-Bold.fnt)
 %Fl(7,8-RobotoCondensed-Light.fnt)
-%Fl(9,64-RobotoCondensed-Light.fnt)
+%Fl(9,96-RobotoMono-Light.fnt)
+#%Fl(9,64-RobotoCondensed-Light.fnt)
 %Fl(11,18-0newiconfont.fnt)
 
 ###### Lock screen Images
@@ -62,7 +63,7 @@
 
 %?and(%if(%cs,!=,10),%if(%cs,!=,21))<%?mh<%Vd(clear2)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)|%?if(%St(playlist viewer icons),=,on)<%Vd(debug)%Vd(littleclock)|%Vd(DateCentered)%Vd(littleclock)>>>
 # When USB plugged in...
-%?if(%cs, =, 21)<%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)>
+%?if(%cs, =, 21)<%VI(USB)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)>
 
 #%?if(%cs, =, 21)<%Vd(clear2)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)>
 %Vl(clear2,0,0,-,-,4)
@@ -240,13 +241,13 @@
 
 
 # progress bar ##
-%Vl(NowPlaying,66,222,182,5,0)
+%Vl(NowPlaying,66,222,182,4,0)
 #color logic for nice variety
 %?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
-%?C<%?mh<*|%?if(%cs, !=, 10)<%pb>>>
+%?C<%?mh<*|%?if(%cs, !=, 10)<%pb(0,0,-,-,-,noborder)>>>
 
 
-# #little square
+# #little square 
 #%Vl(NowPlaying,250,180,60,60,5)
 #%?C<P>
 # lossless for little square
@@ -349,8 +350,9 @@
 
 
 #------------ Lockscreen Layer ------------######
-#%Vl(LockRefresh,0,0,175,207,-)
+
 %Vl(lockstatusbar,0,0,-,30,4)
+%Vi(USB,0,0,1,1,6)
 %Vl(LockscreenItems,0,0,150,30,11)
 %?bs<f|>
 
@@ -370,8 +372,8 @@
 %?lh<%t(0.1)p;%t(0.1)p;%t(0.1)o;%t(0.1)p|>
 
 # Day Month Date #####
-%Vl(LockscreenItems,3,72,305,60,4)
-%t(.1);%t(999)%ac%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>%, %?cm<January|February|March|April|May|June|July|August|September|October|November|December> %?cd<2nd|3rd|4th|5th|6th|7th|8th|9th|10th|11th|12th|13th|14th|15th|16th|17th|18th|19th|20th|21st|22nd|23rd|24th|25th|26th|27th|28th|29th|30th|31st|1st>;
+%Vl(LockscreenItems,3,31,317,60,4)
+%ac%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>%, %?cm<January|February|March|April|May|June|July|August|September|October|November|December> %?cd<2nd|3rd|4th|5th|6th|7th|8th|9th|10th|11th|12th|13th|14th|15th|16th|17th|18th|19th|20th|21st|22nd|23rd|24th|25th|26th|27th|28th|29th|30th|31st|1st>
 #%ac%ca%, %cb %cd
 #%ac%cd %?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 #%ac%?cm<January|February|March|April|May|June|July|August|September|October|November|December> %cd
@@ -379,9 +381,8 @@
 
 
 
-
 # large time clock #
-%Vl(LockscreenItems,0,96,-,58,9)
+%Vl(LockscreenItems,0,60,-20,100,9)%al%cl:%cM%cp
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
@@ -393,9 +394,13 @@
 %?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
-%ac%cl:%cM %cp 
 
-#top center USB notification##
+
+%Vl(LockscreenItems,30,200,-30,18,2)%Vf(00ff00)
+%bl(0,0,-,6,-)
+#%ac%?if(%bp, =, p)<• Charger Connected •|>
+
+#USB notification##
 %Vl(LockscreenItems,74,220,175,-,2)
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
@@ -407,24 +412,15 @@
 %?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
-%ac%?if(%cs, =, 21)<• USB Connected •|•>
+%ac%?if(%cs, =, 21)<• USB Connected •|>
 
-#cover stock USB graphic###
-%Vl(LockscreenItems,0,200,-,18,2)
-%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
-%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
-%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
-%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
-%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
-%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
-%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
-%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
-%Vf(8FB5F1)>>>>>>>>>>
-%ac%?if(%bp, =, p)<• Charger Connected •|•>
+
+
+
 
 # Playback and hold status #
 %Vl(LockscreenPlayHold,6,6,64,15,11)%?mp<%if(%mp, =, 0)|%if(%mp, =, 1)k|%if(%mp, =, 2)l|%if(%mp, =, 3)y|%if(%mp, =, 4)z|F>%t(10)%?or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13))<d|>%?mh<n|>%?bs<f|>
+
 
 
 
