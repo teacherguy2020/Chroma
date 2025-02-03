@@ -149,7 +149,7 @@
 %Vl(Slider,60,227,34,10,6)
 %ar%pc
 # SLIDER and color logic#
-%Vl(Slider,100,230,120,8,-)
+%Vl(Slider,100,230,120,4,-)
 %pb(0,0,120,4,-,-,noborder)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
@@ -165,8 +165,11 @@
 #total song time
 %Vl(Slider,224,227,34,10,6)
 %al%pt
-#
-#
+##
+# SLIDER backdrop#
+%Vl(Slider,100,235,120,1,-)%dr(0,0,-,-,f7f7f7)
+
+
 #-- Track Title on its own line--#
 %Vl(Player,30,183,260,36,7)%s%ac%it
 #color logic for nice variety
