@@ -132,25 +132,28 @@
 #
 #
 #Track Count
-%Vl(count,8,222,65,15,10)
+%Vl(count,8,218,65,15,10)
 # %al%pp%?if(%pp,<,10)<１１１|%?if(%pp,<,100)<１１|%?if(%pp,<,1000)<１|>>>
 %al%pp%?if(%pp,<,10)<|%?if(%pp,<,100)<|%?if(%pp,<,1000)<|>>>
 
 #
-%Vl(count,212,222,100,15,10)
+%Vl(count,212,218,100,15,10)
 %ar%?if(%pe,<,10)<%pe|%?if(%pe,<,100)<%pe|%?if(%pe,<,1000)<%pe|%pe>>>
 #
-# new disk activity ##
+# new disk activity ####
 %Vl(Player,278,2,13,18,10)
 %ac%?lh<%t(0.3)q;%t(0.3)p;%t(0.3)o;%t(0.3)p|>
 #
-#
+#slider background
+%Vl(Slider,65,221,-65,18,3)
+K
+
 # track times and slider #
-%Vl(Slider,60,227,34,10,6)
+%Vl(Slider,72,223,26,10,6)%Vf(-)%Vb(-)%Vs(invert)
 %ar%pc
 # SLIDER and color logic#
-%Vl(Slider,100,230,120,4,-)
-%pb(0,0,120,4,-,-,noborder)
+%Vl(Slider,104,227,110,4,-)
+%pb(0,0,-,-,-,noborder)
 #color logic for nice variety
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
@@ -163,11 +166,11 @@
 %?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
 %Vf(8FB5F1)>>>>>>>>>>
 #total song time
-%Vl(Slider,224,227,34,10,6)
+%Vl(Slider,220,223,26,10,6)%Vf(-)%Vb(-)%Vs(invert)
 %al%pt
 ##
 # SLIDER backdrop#
-%Vl(Slider,100,235,120,1,-)%dr(0,0,-,-,f7f7f7)
+#%Vl(Slider,100,235,120,1,-)%dr(0,0,-,-,f7f7f7)
 
 
 #-- Track Title on its own line--#
@@ -187,7 +190,7 @@
 %?if(%St(scrollbar),!=,right)<%Vf(-)>
 #
 # Rotating info album/artist/file format
-%Vl(Player,4,206,311,17,9)
+%Vl(Player,4,204,311,17,9)
 %s%ac%t(4)%s%ia;%ac%t(6)%id • %iy;%ac%t(4)%fk kHz %fc @ %fb kbps;%ac%t(4)%?It<Next: %It>
 #
 #
