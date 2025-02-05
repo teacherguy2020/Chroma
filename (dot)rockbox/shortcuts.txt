@@ -22,7 +22,7 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast1.cfg
+data: /Chroma Stuff/Desktop Presets/ChromaFast1.cfg
 name: ••Desktop 1 (8 icons)
 icon: 4
 talkclip: 
@@ -49,7 +49,7 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast2.cfg
+data: /Chroma Stuff/Desktop Presets/ChromaFast2.cfg
 name: ••Desktop 2 (8 icons)
 icon: 4
 talkclip: 
@@ -70,13 +70,13 @@ talkclip:
 [shortcut]
 type: separator
 data: 
-name:  use all 10 menu items
+name:  need more than 8 tiles
 icon: -1
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Desktop Presets/ChromaFast3.cfg
+data: /Chroma Stuff/Desktop Presets/ChromaFast3.cfg
 name: ••Desktop 3 (10 icons)
 icon: 4
 talkclip: 
@@ -111,28 +111,28 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsON.cfg
+data: /Chroma Stuff/Settings/PlaylistviewericonsON.cfg
 name: Debug on, Date off
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/PlaylistviewericonsOFF.cfg
+data: /Chroma Stuff/Settings/PlaylistviewericonsOFF.cfg
 name: Date on, Debug off
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/USBbrowser.cfg
+data: /Chroma Stuff/Settings/USBbrowser.cfg
 name: OS X Desktop
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/USBmultimedia.cfg
+data: /Chroma Stuff/Settings/USBmultimedia.cfg
 name: Color Desktop
 icon: 20
 talkclip: 
@@ -140,112 +140,112 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/Quickscreen.cfg
+data: /Chroma Stuff/Settings/Quickscreen.cfg
 name: Get custom Quickscreen
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/scrollbarwidth7.cfg
+data: /Chroma Stuff/Settings/scrollbarwidth7.cfg
 name: miniDock On
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/scrollbarwidth6.cfg
+data: /Chroma Stuff/Settings/scrollbarwidth6.cfg
 name: miniDock Off
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/CarAdapterModeOn.cfg
+data: /Chroma Stuff/Settings/CarAdapterModeOn.cfg
 name: Rounded Album Corners
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/CarAdapterModeOff.cfg
+data: /Chroma Stuff/Settings/CarAdapterModeOff.cfg
 name: Square Album Corners
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/YesIcons.cfg
+data: /Chroma Stuff/Settings/YesIcons.cfg
 name: Color Icons
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/NoIcons.cfg
+data: /Chroma Stuff/Settings/NoIcons.cfg
 name: Monochrome Icons
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/VolumeGraphic.cfg
+data: /Chroma Stuff/Settings/VolumeGraphic.cfg
 name: Show Wallpaper in Player
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/VolumeNumeric.cfg
+data: /Chroma Stuff/Settings/VolumeNumeric.cfg
 name: Hide Wallpaper in Player
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/StatusbarTop.cfg
+data: /Chroma Stuff/Settings/StatusbarTop.cfg
 name: Show Track Counter
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/StatusbarOff.cfg
+data: /Chroma Stuff/Settings/StatusbarOff.cfg
 name: Hide Track Counter
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/StatusbarBottom.cfg
+data: /Chroma Stuff/Settings/StatusbarBottom.cfg
 name: Show Track Counter during Pause
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/TrackTitlePlain.cfg
+data: /Chroma Stuff/Settings/TrackTitlePlain.cfg
 name: No accent color on Track Title
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/TrackTitleAccent.cfg
+data: /Chroma Stuff/Settings/TrackTitleAccent.cfg
 name: Accent color on Track Title
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/BatteryGraphic.cfg
+data: /Chroma Stuff/Settings/BatteryGraphic.cfg
 name: Show Wallpaper on Lockscreen
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Settings/BatteryNumeric.cfg
+data: /Chroma Stuff/Settings/BatteryNumeric.cfg
 name: Show WPS on Lockscreen
 icon: 20
 talkclip: 
@@ -266,14 +266,14 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaLight.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaLight.cfg
 name: Chroma Light
 icon: 4
 talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaDark.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaDark.cfg
 name: Chroma Dark
 icon: 4
 talkclip:
@@ -281,35 +281,51 @@ talkclip:
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaSteel.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaSteel.cfg
 name: Steel
 icon: 4
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaBlue.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaBlue.cfg
 name: Blue
 icon: 4
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaPurple.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaPurple.cfg
 name: Purple
 icon: 4
 talkclip: 
 
 [shortcut]
 type: file
-data: /<HDD0>/Chroma Stuff/Chroma Skins/ChromaCrimson.cfg
+data: /Chroma Stuff/Chroma Skins/ChromaCrimson.cfg
 name: Crimson
 icon: 4
 talkclip: 
 
 [shortcut]
+type: file
+data: /Chroma Stuff/Chroma Skins/ChromaJeans.cfg
+name: Jeans
+icon: 4
+talkclip: 
+
+[shortcut]
+type: file
+data: /Chroma Stuff/Chroma Skins/ChromaGray.cfg
+name: Silver
+icon: 4
+talkclip: 
+
+
+
+[shortcut]
 type: browse
-data: /<HDD0>/Chroma Stuff/Chroma Skins/
+data: /Chroma Stuff/Chroma Skins/
 name: All Skins
 icon: 1
 talkclip: 
@@ -326,5 +342,4 @@ type: file
 data: /.rockbox/rockbox.ipod
 name: Reboot
 icon: 5
-talkclip: 
-
+talkclip:
