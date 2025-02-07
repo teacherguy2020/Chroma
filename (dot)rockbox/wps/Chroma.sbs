@@ -166,18 +166,18 @@
 # display of submenu items in Settings, needs work
 %?and(%if(%cs,=,6),%if(%Lt,!=,Settings))<%Lb(MenuList3,195,24)>
 #Load three strips for preset layouts
-%xl(W,wpsIcons.bmp,0,0,8)
-%xl(WS,wpsIconsSelected.bmp,0,0,8)
-%xl(F,filesIcons.bmp,0,0,8)
-%xl(FS,filesIconsSelected.bmp,0,0,8)
-%xl(R,rockboxIcons.80.bmp,0,0,10)
-%xl(RS,rockboxIconsSelected.80.bmp,0,0,10)
-%xl(M,rockboxIcons.80.MB.bmp,0,0,10)
-%xl(MS,rockboxIconsSelected.80.MB.bmp,0,0,10)
-%xl(N,filesIcons.M.bmp,0,0,8)
-%xl(NS,filesIconsSelected.M.bmp,0,0,8)
-%xl(O,wpsIcons.M.bmp,0,0,8)
-%xl(OS,wpsIconsSelected.M.bmp,0,0,8)
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, off))<%xl(W,wpsIcons.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, off))<%xl(WS,wpsIconsSelected.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, off))<%xl(F,filesIcons.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, off))<%xl(FS,filesIconsSelected.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, off))<%xl(R,rockboxIcons.80.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, off))<%xl(RS,rockboxIconsSelected.80.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, on))<%xl(M,rockboxIcons.80.MB.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, on))<%xl(MS,rockboxIconsSelected.80.MB.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, on))<%xl(N,filesIcons.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, on))<%xl(NS,filesIconsSelected.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, on))<%xl(O,wpsIcons.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, on))<%xl(OS,wpsIconsSelected.M.bmp,0,0,8)>
 
 
 
