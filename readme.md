@@ -33,10 +33,10 @@ Here is a list of the settings you can change in Chroma:
 
 SBS
 * Turn the miniDock on/off
-* Switch between showing the menu name of each tile icon or showing the date (coming soon)
-* Change the viewport at the top to show the date while on the main desktop
+* Switch between showing the menu name of each tile icon or showing the date
 * Change the desktop to use classic blue OS X background
 * Switch between color or monochrome tile icons
+* Get custom Quickscreen
 
 WPS (While Playing Screen)
 * Turn Rounded Album Corners on/off
