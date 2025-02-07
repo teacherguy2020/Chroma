@@ -46,7 +46,7 @@
 %?and(%if(%cs, !=, 10),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB%Vd(clear)|%?if(%cs, !=, 10)<%xd(Frame)%VB>%Vd(clear)>
 
 
-%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>%?if(%mh, =, h)<%Vd(LockscreenItems)%Vd(DayDate)%Vd(hello)>|%?or(%if(%cs ,=, 1),%if(%mh, =, h))<%Vd(NowPlaying)%Cl(13,183,45,45)%Cd>|>|%?if(%cs,=,1)<%?C<%?mh<%Cl(13,183,45,45)%Cd%Vd(NowPlaying)%Vd(DayDate)|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>|>||>
+%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>%?if(%mh, =, h)<%Vd(hello)%Vd(LockscreenItems)%Vd(DayDate)>|%?or(%if(%cs ,=, 1),%if(%mh, =, h))<%Vd(NowPlaying)%Cl(13,183,45,45)%Cd>|>|%?if(%cs,=,1)<%?C<%?mh<%Cl(13,183,45,45)%Cd%Vd(NowPlaying)%Vd(DayDate)|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>|>||>
 %?if(%cs, =, 1)<%?mh<%?pS(0.1)<%Vd(LockscreenItems)%Vd(DayDate)%Vd(LockscreenPlayHold)>>>
 
 
@@ -56,14 +56,14 @@
 ###### Foreground Layer. #####
 #status bar
 %V(0,0,-,30,4)
-#Reminder
+#Reminder#
 %Vl(Reminder,70,60,-70,24,4)
 %?C<|%acTap Menu>
 
 
 %Vl(clear,0,0,-,-,4)
 
-%?and(%if(%cs,!=,10),%if(%cs,!=,21))<%?mh<%Vd(clear2)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)|%?if(%St(playlist viewer icons),=,on)<%Vd(debug)%Vd(littleclock)|%Vd(DateCentered)%Vd(littleclock)>>>
+%?and(%if(%cs,!=,10),%if(%cs,!=,21))<%?mh<%Vd(clear2)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)%Vd(DayDate)|%?if(%St(playlist viewer icons),=,on)<%Vd(debug)%Vd(littleclock)|%Vd(DateCentered)%Vd(littleclock)>>>
 # When USB plugged in...
 %?if(%cs, =, 21)<%VI(USB)%Vd(LockscreenItems)%Vd(LockscreenPlayHold)%Vd(Reminder)%Vd(DayDate)%?if(%mp, =, 1)<%Vd(hello)>>
 
@@ -94,17 +94,28 @@
 # color logic for nice variety
 %Vl(DateCentered,70,1,-70,30,4)
 %?if(%ss(0,1,%St(scrollbar width)),=,7)<%?and(%if(%Lt, !=, Files),%if(%Lt, !=, Database),%if(%Lt, !=, Select Bookmark),%if(%Lt, !=, Playlist Catalogue),%if(%Lt, !=, Settings),%if(%Lt, !=, Recording),%if(%Lt, !=, Plugins),%if(%Lt, !=, Shortcuts),%if(%Lt, !=, System),%if(%Lt, !=, Rockbox))<%ac%Lt|%ac%ca %cd %cb>|%?if(%cs, !=, 1)<%s%ac%Lt|%s%ac%ca %cd %cb>>
-%?if(%ss(0,1,%St(foreground color)),>=,a)<%?if(%ss(2,1,%St(foreground color)),>=,a)<%?if(%ss(4,1,%St(foreground color)),>=,a)<%?if(%ss(1,1,%St(foreground color)),=,7)<%?if(%ss(3,1,%St(foreground color)),=,7)<%?if(%ss(5,1,%St(foreground color)),=,7)<%Vf(BADEF3)|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(FF0000)>|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,0)<%?if(%ss(2,1,%St(foreground color)),=,0)<%?if(%ss(4,1,%St(foreground color)),=,0)<%Vf(FF0000)|%Vf(c6c5c5)>|%Vf(c6c5c5)>|%?if(%ss(0,1,%St(foreground color)),=,9)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,8)<%Vf(FFFFFF)|%?if(%ss(0,1,%St(foreground color)),=,7)<%Vf(FFFFFF)|%?if(%ss(2,1,%St(foreground color)),=,9)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,8)<%Vf(ccffcc)|%?if(%ss(2,1,%St(foreground color)),=,7)<%Vf(ccffcc)|%?if(%ss(4,1,%St(foreground color)),=,9)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,8)<%Vf(3f8dbc)|%?if(%ss(4,1,%St(foreground color)),=,7)<%Vf(3f8dbc)|%Vf(c6c5c5)>>>>>>>>>>>>>>>>
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+
 
 #Battery, Upper Right##
 %Vl(littleclock,294,3,21,14,11)
 %?if(%bc,=,c)<１|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
 #if the battery is not fully charged but charging, show green on the charging icon
-%?if(%bc,=,c)<%Vf(00ff00)%Vd(chargeprogress)|%Vf(-)>
+%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
 
-## Little Clock, upper left
+## Little Clock, upper left ##
 %Vl(littleclock,10,5,55,14,2)
 %al%cl:%cM %cp
+#%?if(%St(car adapter mode), =, on)<on|off>
 
 %Vl(littleclock,280,2,12,16,11)
 # disk access #
@@ -161,6 +172,12 @@
 %xl(FS,filesIconsSelected.bmp,0,0,8)
 %xl(R,rockboxIcons.80.bmp,0,0,10)
 %xl(RS,rockboxIconsSelected.80.bmp,0,0,10)
+%xl(M,rockboxIcons.80.MB.bmp,0,0,10)
+%xl(MS,rockboxIconsSelected.80.MB.bmp,0,0,10)
+%xl(N,filesIcons.M.bmp,0,0,8)
+%xl(NS,filesIconsSelected.M.bmp,0,0,8)
+%xl(O,wpsIcons.M.bmp,0,0,8)
+%xl(OS,wpsIconsSelected.M.bmp,0,0,8)
 
 
 
@@ -182,17 +199,23 @@
 
 
 #Size of each "viewport" inside of grid MenuTiles1
-#This handles Layout 1
-%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?Lc<%xd(WS,%LN)|%xd(W,%LN)>>
+#This handles Layout 1#
+%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(WS,%LN)|%xd(W,%LN)>|%?Lc<%xd(OS,%LN)|%xd(O,%LN)>>>
 
 #Size of each "viewport" inside of grid MenuTiles4
 #This handles Layout 2
-%Vl(MenuTiles4,0,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
+#%Vl(MenuTiles4,0,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
+%Vl(MenuTiles4,0,0,80,80,1)%mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(FS,%LN)|%xd(F,%LN)>|%?Lc<%xd(NS,%LN)|%xd(N,%LN)>>>
 
 
 #Size/placement of each "viewport" inside of grid MenuTiles3 ##
-#Layout 3
-%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?Lc<%xd(RS,%LN)|%xd(R,%LN)>>
+#Layout 3 #
+#%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?Lc<%xd(RS,%LN)|%xd(R,%LN)>>
+#car adapter mode used to trigger monochrome icons...
+%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(RS,%LN)|%xd(R,%LN)>|%?Lc<%xd(MS,%LN)|%xd(M,%LN)>>>
+
+
+
 
 
 #Settings Menu Viewport
@@ -367,7 +390,7 @@
 %Vl(TheDocki,0,234,-,-,0)
 
 #hello
-%Vl(hello,5,180,-,-,5)
+%Vl(hello,0,180,310,-,5)
 %?C<|%acI>
 
 
@@ -380,14 +403,14 @@
 %Vl(LockscreenItems,0,0,150,30,11)
 %?bs<f|>
 
-# battery icons #
+# battery icons 
 %Vl(LockscreenItems,294,3,21,20,11)
 #%?if(%bp,=,p)<%t(1)１;%t(1)c;|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
 #%?if(%bc,=,c)<１|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
 #if the battery is not fully charged, show green on the charging icon
 #%?if(%bc,=,c)<%Vf(00ff00)>
-%?if(%bp,=,p)<%?if(%bc,=,c)<１|v>|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
-%?if(%bc,=,c)<%Vf(00ff00)|%Vf(-)>
+%?if(%bp,=,p)<%?if(%bc,=,c)<１%?if(%cs, =, 21)<%Vd(chargeprogress)>|v>|%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>>
+%?if(%bc,=,c)<%Vf(00ff00)%Vd(LockscreenItems)|%Vf(-)>
 #%?bl<M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c>
 
 
@@ -398,9 +421,28 @@
 
 
 
-# large time clock #
-%Vl(LockscreenItems,0,21,-20,96,9)%al%cl:%cM%cp
-#color logic for nice variety
+# large time clock-after 9:00#
+%Vl(LockscreenItems,10,21,290,96,9)
+%?if(%cl, >, 9)<%?ck<1|2|3|4|5|6|7|8|9|10|11|12|1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
+#color logic for nice variety #
+%?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
+%?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),>,65),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(BF5CF1)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ffff00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),>,50),%if(%ss(2,2,%St(foreground color)),<,70),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff8c00)|
+%?and(%if(%ss(0,2,%St(foreground color)),>,70),%if(%ss(2,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ff3c3c)|
+%?and(%if(%ss(2,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(4,2,%St(foreground color)),<,50))<%Vf(ccffcc)|
+%?and(%if(%ss(4,2,%St(foreground color)),>,70),%if(%ss(0,2,%St(foreground color)),<,50),%if(%ss(2,2,%St(foreground color)),<,50))<%Vf(3f8dbc)|
+%Vf(8FB5F1)>>>>>>>>>>
+# large time before 9:00
+%Vl(LockscreenItems,0,21,310,96,9)
+%ac%?if(%cl, <, 10)<%?ck<1|2|3|4|5|6|7|8|9|10|11|12|1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
+#%Vl(LockscreenItems,210,21,-,96,9)
+#%cp
+#%al%?or(%if(%cl,  =, 10),%if(%cl, =, 11),%if(%cl, =, 12))<%cl:%cM%cp|%cl:%cM>
+
+#color logic for nice variety #
 %?if(%ss(0,6,%St(foreground color)),=,000000)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,ffffff)<%Vf(ff3c3c)|
 %?if(%ss(0,6,%St(foreground color)),=,f7f7f7)<%Vf(000000)|
