@@ -36,7 +36,7 @@ SBS
 * Switch between showing the menu name of each tile icon or showing the date (coming soon)
 * Change the viewport at the top to show the date while on the main desktop
 * Change the desktop to use classic blue OS X background
-* Switch between color or monochrome tile icons (coming soon)
+* Switch between color or monochrome tile icons
 
 WPS (While Playing Screen)
 * Turn Rounded Album Corners on/off
