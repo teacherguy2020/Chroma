@@ -114,8 +114,8 @@
 
 ## Little Clock, upper left ##
 %Vl(littleclock,10,5,55,14,2)
-%al%cl:%cM %cp
-#%?if(%St(car adapter mode), =, on)<on|off>
+#%al%cl:%cM %cp
+%St(hold_lr_for_scroll_in_list)
 
 %Vl(littleclock,280,2,12,16,11)
 # disk access #
@@ -127,7 +127,7 @@
 # mode: %mp
 # display for Settings screen, lower left
 # %Vl(TrackBar,4,210,-4,25,3)%s%ac%?it<%it - |>%?ia<%ia|%fn>
-############################
+#########################
 
 # %?or(%if(%cs, =, 21),%if(%cs, =, 10),%and(%if(%cs, =, 1),%mh))<|%Vd(StatusBar)>
 
@@ -166,18 +166,18 @@
 # display of submenu items in Settings, needs work
 %?and(%if(%cs,=,6),%if(%Lt,!=,Settings))<%Lb(MenuList3,195,24)>
 #Load three strips for preset layouts
-%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, off))<%xl(W,wpsIcons.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, off))<%xl(WS,wpsIconsSelected.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, off))<%xl(F,filesIcons.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, off))<%xl(FS,filesIconsSelected.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, off))<%xl(R,rockboxIcons.80.bmp,0,0,10)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, off))<%xl(RS,rockboxIconsSelected.80.bmp,0,0,10)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, on))<%xl(M,rockboxIcons.80.MB.bmp,0,0,10)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(car adapter mode), =, on))<%xl(MS,rockboxIconsSelected.80.MB.bmp,0,0,10)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, on))<%xl(N,filesIcons.M.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(car adapter mode), =, on))<%xl(NS,filesIconsSelected.M.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, on))<%xl(O,wpsIcons.M.bmp,0,0,8)>
-%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(car adapter mode), =, on))<%xl(OS,wpsIconsSelected.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(W,wpsIcons.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(WS,wpsIconsSelected.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(F,filesIcons.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(FS,filesIconsSelected.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(R,rockboxIcons.80.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(hold_lr_for_scroll_in_list), =, off))<%xl(RS,rockboxIconsSelected.80.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(M,rockboxIcons.80.MB.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,b),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(MS,rockboxIconsSelected.80.MB.bmp,0,0,10)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(N,filesIcons.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(NS,filesIconsSelected.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(O,wpsIcons.M.bmp,0,0,8)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,w),%if(%St(hold_lr_for_scroll_in_list), =, on))<%xl(OS,wpsIconsSelected.M.bmp,0,0,8)>
 
 
 
@@ -200,19 +200,19 @@
 
 #Size of each "viewport" inside of grid MenuTiles1
 #This handles Layout 1#
-%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(WS,%LN)|%xd(W,%LN)>|%?Lc<%xd(OS,%LN)|%xd(O,%LN)>>>
+%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(WS,%LN)|%xd(W,%LN)>|%?Lc<%xd(OS,%LN)|%xd(O,%LN)>>>
 
 #Size of each "viewport" inside of grid MenuTiles4
 #This handles Layout 2
 #%Vl(MenuTiles4,0,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
-%Vl(MenuTiles4,0,0,80,80,1)%mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(FS,%LN)|%xd(F,%LN)>|%?Lc<%xd(NS,%LN)|%xd(N,%LN)>>>
+%Vl(MenuTiles4,0,0,80,80,1)%mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(FS,%LN)|%xd(F,%LN)>|%?Lc<%xd(NS,%LN)|%xd(N,%LN)>>>
 
 
 #Size/placement of each "viewport" inside of grid MenuTiles3 ##
 #Layout 3 #
 #%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?Lc<%xd(RS,%LN)|%xd(R,%LN)>>
 #car adapter mode used to trigger monochrome icons...
-%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?if(%St(car adapter mode), =, off)<%?Lc<%xd(RS,%LN)|%xd(R,%LN)>|%?Lc<%xd(MS,%LN)|%xd(M,%LN)>>>
+%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(RS,%LN)|%xd(R,%LN)>|%?Lc<%xd(MS,%LN)|%xd(M,%LN)>>>
 
 
 

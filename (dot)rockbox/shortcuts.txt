@@ -111,14 +111,14 @@ talkclip:
 
 [shortcut]
 type: file
-data: /Chroma Stuff/Settings/CarAdapterModeOn.cfg
+data: /Chroma Stuff/Settings/HoldLROFF.cfg
 name: Monochrome Icons On
 icon: 20
 talkclip: 
 
 [shortcut]
 type: file
-data: /Chroma Stuff/Settings/CarAdapterModeOff.cfg
+data: /Chroma Stuff/Settings/HoldLRON.cfg
 name: Color Icons On
 icon: 20
 talkclip: 
