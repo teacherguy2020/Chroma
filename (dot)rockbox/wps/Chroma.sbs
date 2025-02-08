@@ -114,8 +114,8 @@
 
 ## Little Clock, upper left ##
 %Vl(littleclock,10,5,55,14,2)
-#%al%cl:%cM %cp
-%St(hold_lr_for_scroll_in_list)
+%al%cl:%cM %cp
+#%St(hold_lr_for_scroll_in_list)
 
 %Vl(littleclock,280,2,12,16,11)
 # disk access #
