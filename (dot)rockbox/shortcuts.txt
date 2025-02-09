@@ -189,20 +189,6 @@ talkclip:
 
 [shortcut]
 type: file
-data: /Chroma Stuff/Settings/YesIcons.cfg
-name: Color Icons
-icon: 20
-talkclip: 
-
-[shortcut]
-type: file
-data: /Chroma Stuff/Settings/NoIcons.cfg
-name: Monochrome Icons
-icon: 20
-talkclip: 
-
-[shortcut]
-type: file
 data: /Chroma Stuff/Settings/VolumeGraphic.cfg
 name: Show Wallpaper in Player
 icon: 20
