@@ -10,12 +10,12 @@
 
 ###### Fonts ###
 
-%Fl(2,16-Roboto-Regular.fnt)
-#%Fl(3,16-Roboto-Regular.fnt)
+%Fl(2,16-Roboto-Bold.fnt)
+%Fl(3,16-Roboto-Regular.fnt)
 %Fl(4,24-Roboto-Bold.fnt)
 %Fl(5,72-albumcorners.fnt)
 %Fl(6,8-Roboto-Bold.fnt)
-#%Fl(7,8-RobotoCondensed-Light.fnt)
+%Fl(7,8-RobotoCondensed-Light.fnt)
 %Fl(9,96-RobotoMono-Light.fnt)
 #%Fl(9,64-RobotoCondensed-Light.fnt)
 %Fl(11,18-0newiconfont.fnt)
@@ -23,7 +23,7 @@
 ###### Lock screen Images
 #%xl(Frame,frame.bmp)
 #%xl(Desktop,desktop.bmp)
-#%xl(LockImage,Wallpaper.bmp)
+%xl(LockImage,Wallpaper.bmp)
 # additional icons for the Settings Screen
 %xl(SM,settingsIcons.bmp,0,0,8)
 %xl(SS,settingsIconsSelector.bmp,0,0,8)
@@ -40,7 +40,7 @@
 #%?and(%if(%cs, !=, 21),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB|%xd(Frame)%VB>
 
 %xl(Frame,frame.bmp)
-%?if(%St(usb keypad mode), =, browser)<%xl(Desktop,desktop.bmp)>
+%xl(Desktop,desktop.bmp)
 
 #%?and(%if(%cs, !=, 21),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB%Vd(clear)|%?if(%cs, !=, 21)<%xd(Frame)%VB>%Vd(clear)>
 %?and(%if(%cs, !=, 10),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB%Vd(clear)|%?if(%cs, !=, 10)<%xd(Frame)%VB>%Vd(clear)>
@@ -189,7 +189,7 @@
 
 #### Layout 2 - Files first. ###################################
 #Set the overall grid divisors if Layout 2
-%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%cs,=,1))<%Lb(MenuTiles4,76,71,tile)>
+%?and(%if(%ss(0,1,%St(root menu order)),=,f),%if(%cs,=,1))<%Lb(MenuTiles4,80,71,tile)>
 
 
 # Layout 3 - Bookmarks first (10 icons)
@@ -200,19 +200,19 @@
 
 #Size of each "viewport" inside of grid MenuTiles1
 #This handles Layout 1#
-%Vl(MenuTiles1,0,0,78,78,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(WS,%LN)|%xd(W,%LN)>|%?Lc<%xd(OS,%LN)|%xd(O,%LN)>>>
+%Vl(MenuTiles1,1,0,78,78,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(WS,%LN)|%xd(W,%LN)>|%?Lc<%xd(OS,%LN)|%xd(O,%LN)>>>
 
 #Size of each "viewport" inside of grid MenuTiles4
 #This handles Layout 2
-#%Vl(MenuTiles4,0,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
-%Vl(MenuTiles4,0,0,80,80,1)%mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(FS,%LN)|%xd(F,%LN)>|%?Lc<%xd(NS,%LN)|%xd(N,%LN)>>>
+#%Vl(MenuTiles4,1,0,80,80,1)%?Lc<%xd(FS,%LN)|%xd(F,%LN)>
+%Vl(MenuTiles4,1,0,78,78,1)%mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(FS,%LN)|%xd(F,%LN)>|%?Lc<%xd(NS,%LN)|%xd(N,%LN)>>>
 
 
 #Size/placement of each "viewport" inside of grid MenuTiles3 ##
 #Layout 3 #
 #%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?Lc<%xd(RS,%LN)|%xd(R,%LN)>>
 #car adapter mode used to trigger monochrome icons...
-%Vl(MenuTiles3,0,0,80,71,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(RS,%LN)|%xd(R,%LN)>|%?Lc<%xd(MS,%LN)|%xd(M,%LN)>>>
+%Vl(MenuTiles3,2,0,80,71,1)%?mh<|%?if(%St(hold_lr_for_scroll_in_list), =, on)<%?Lc<%xd(RS,%LN)|%xd(R,%LN)>|%?Lc<%xd(MS,%LN)|%xd(M,%LN)>>>
 
 
 
@@ -238,13 +238,13 @@
 #clear
 #%Vl(NowPlaying,0,180,-,-,-)
 #left endcap
-%Vl(NowPlaying,10,180,50,53,5)
+%Vl(NowPlaying,12,180,50,53,5)
 %?C<R>
 
 
 
 #right endcap
-%Vl(NowPlaying,257,180,60,53,5)
+%Vl(NowPlaying,259,180,60,53,5)
 %?C<V>
 
 #body rect 1
@@ -260,7 +260,7 @@
 
 
 # track title
-%Vl(NowPlaying,67,205,-63,15,2)%Vf(-)%Vb(-)%Vs(invert)
+%Vl(NowPlaying,67,205,-63,15,3)%Vf(-)%Vb(-)%Vs(invert)
 #%?C<%?mh<*|%s%it>>
 %?C<%s%it>
 
@@ -493,7 +493,7 @@
 #------------ Quickscreen Layer --------------------#####
 #--- Default Quickscreen ---#
 # make default quickscreen small
-%Vi(QuickDefault,0,210,30,30,6)
+%Vi(QuickDefault,0,210,30,30,7)
 
 
 # color the default quickscreen font same as background, small QS is "visible but now has camo
