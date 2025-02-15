@@ -46,7 +46,7 @@
 %?and(%if(%cs, !=, 10),%if(%St(usb keypad mode), =, browser))<%xd(Desktop)%VB%Vd(clear)|%?if(%cs, !=, 10)<%xd(Frame)%VB>%Vd(clear)>
 
 
-%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>%?if(%mh, =, h)<%Vd(hello)%Vd(LockscreenItems)%Vd(DayDate)>|%?or(%if(%cs ,=, 1),%if(%mh, =, h))<%Vd(NowPlaying)%Cl(13,183,45,45)%Cd>|>|%?if(%cs,=,1)<%?C<%?mh<%Cl(13,183,45,45)%Cd%Vd(NowPlaying)%Vd(DayDate)|%Cl(13,183,45,45)%Cd%Vd(NowPlaying)>|>||>
+%?mp<%?if(%cs, =, 1)<%Vd(hello)%Vd(Reminder)>%?if(%mh, =, h)<%Vd(hello)%Vd(LockscreenItems)%Vd(DayDate)>|%?or(%if(%cs ,=, 1),%if(%mh, =, h))<%Vd(NowPlaying)%Cl(13,183,45,45)%Cd>|>|%?if(%cs,=,1)<%?C<%?mh<%Cl(15,183,45,45)%Cd%Vd(NowPlaying)%Vd(DayDate)|%Cl(15,183,45,45)%Cd%Vd(NowPlaying)>|>||>
 %?if(%cs, =, 1)<%?mh<%?pS(0.1)<%Vd(LockscreenItems)%Vd(DayDate)%Vd(LockscreenPlayHold)>>>
 
 
